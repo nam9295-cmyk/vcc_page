@@ -196,3 +196,77 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstTab) firstTab.click();
     }
 });
+
+// ========== 헤더 스크롤 표시 로직 ==========
+const siteHeader = document.getElementById('site-header');
+const scrollContainer = document.querySelector('.scroll-container');
+
+function updateHeaderVisibility() {
+    if (!siteHeader || !scrollContainer) return;
+
+    const scrollContainerBottom = scrollContainer.offsetTop + scrollContainer.offsetHeight;
+    const currentScroll = window.scrollY + window.innerHeight;
+
+    // 스크롤 컨테이너가 거의 끝날 때 헤더 표시
+    // 모바일: 스크롤이 90% 진행되면 (거의 끝날 때)
+    // 데스크탑: 스크롤 컨테이너를 지나면
+    const threshold = isDesktop ? scrollContainerBottom - 100 : scrollContainer.offsetHeight * 0.9;
+
+    if (window.scrollY > threshold) {
+        siteHeader.classList.add('visible');
+    } else {
+        siteHeader.classList.remove('visible');
+    }
+}
+
+window.addEventListener('scroll', updateHeaderVisibility);
+updateHeaderVisibility();
+
+// ========== 모바일 사이드 메뉴 토글 ==========
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileNav = document.getElementById('mobile-nav');
+const closeMenuBtn = document.getElementById('close-menu-btn');
+const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+
+function openMobileNav() {
+    if (mobileNav) mobileNav.classList.add('open');
+    if (mobileNavOverlay) mobileNavOverlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileNav() {
+    if (mobileNav) mobileNav.classList.remove('open');
+    if (mobileNavOverlay) mobileNavOverlay.classList.remove('visible');
+    document.body.style.overflow = '';
+}
+
+if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', openMobileNav);
+}
+
+if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', closeMobileNav);
+}
+
+if (mobileNavOverlay) {
+    mobileNavOverlay.addEventListener('click', closeMobileNav);
+}
+
+// 사이드 메뉴 링크 클릭 시 해당 탭으로 이동
+const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetTab = link.getAttribute('href').replace('#', '');
+        const tabBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+        if (tabBtn) {
+            tabBtn.click();
+            // 메뉴 섹션으로 스크롤
+            const menuSection = document.querySelector('.menu-section');
+            if (menuSection) {
+                menuSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        closeMobileNav();
+    });
+});
