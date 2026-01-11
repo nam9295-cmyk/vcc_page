@@ -185,10 +185,14 @@ if (prevBtn && nextBtn && productList) {
     });
 }
 
-// 초기 로드 시 첫 번째 탭 활성화
+// 초기 로드 시 'Signature' 탭 활성화
 document.addEventListener('DOMContentLoaded', () => {
-    const firstTab = document.querySelector('.tab-btn');
-    if (firstTab) {
-        firstTab.click();
+    // 'signature' 탭을 찾아서 클릭 (없으면 첫 번째 탭 클릭)
+    const signatureTab = document.querySelector('.tab-btn[data-tab="signature"]');
+    if (signatureTab) {
+        signatureTab.click();
+    } else {
+        const firstTab = document.querySelector('.tab-btn');
+        if (firstTab) firstTab.click();
     }
 });
