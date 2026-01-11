@@ -139,3 +139,56 @@ window.addEventListener('scroll', updateBadges);
 
 // 초기 상태
 updateBadges();
+
+// ========== 메뉴 탭 & 슬라이더 기능 ==========
+const tabButtons = document.querySelectorAll('.tab-btn');
+const productCards = document.querySelectorAll('.product-card');
+const productList = document.getElementById('product-list');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+// 탭 클릭 이벤트
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 활성 탭 변경
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const selectedCategory = btn.dataset.tab;
+
+        // 상품 필터링
+        productCards.forEach(card => {
+            if (card.dataset.category === selectedCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // 슬라이더 위치 초기화
+        if (productList) {
+            productList.scrollLeft = 0;
+        }
+    });
+});
+
+// 슬라이더 네비게이션 (데스크탑)
+if (prevBtn && nextBtn && productList) {
+    const scrollAmount = 350; // 스크롤 이동량
+
+    prevBtn.addEventListener('click', () => {
+        productList.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        productList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+}
+
+// 초기 로드 시 첫 번째 탭 활성화
+document.addEventListener('DOMContentLoaded', () => {
+    const firstTab = document.querySelector('.tab-btn');
+    if (firstTab) {
+        firstTab.click();
+    }
+});

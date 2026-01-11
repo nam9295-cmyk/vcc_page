@@ -40,9 +40,126 @@
         </div>
     </div>
 
-    <div class="content-section">
-        <h2>여기서부터 상세 내용이 나옵니다.</h2>
-    </div>
+    <!-- ========== 메뉴 섹션 ========== -->
+    <section class="menu-section">
+        <h2 class="menu-brand">very goût</h2>
+
+        <!-- 탭 네비게이션 -->
+        <nav class="menu-tabs">
+            <button class="tab-btn active" data-tab="signature">SIGNATURE</button>
+            <button class="tab-btn" data-tab="detox-tea">DETOX TEA</button>
+            <button class="tab-btn" data-tab="coffee">COFFEE</button>
+            <button class="tab-btn" data-tab="icecream">ICECREAM</button>
+            <button class="tab-btn" data-tab="dessert">DESSERT</button>
+        </nav>
+
+        <!-- 상품 슬라이더/리스트 -->
+        <div class="product-container">
+            <div class="product-list" id="product-list">
+                <!-- Signature 상품들 -->
+                <div class="product-card" data-category="signature">
+                    <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400&h=300&fit=crop"
+                        alt="Signature Collection">
+                    <div class="product-info">
+                        <h3>Signature Collection</h3>
+                        <p>희귀한 카카오 빈으로 만든 수제 가나슈 셀렉션</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="signature">
+                    <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=400&h=300&fit=crop"
+                        alt="Dark Truffle">
+                    <div class="product-info">
+                        <h3>Dark Truffle</h3>
+                        <p>벨기에산 다크 초콜릿으로 만든 프리미엄 트러플</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="signature">
+                    <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=300&fit=crop"
+                        alt="Cacao Praline">
+                    <div class="product-info">
+                        <h3>Cacao Praline</h3>
+                        <p>고소한 헤이즐넛과 부드러운 프랄린의 조화</p>
+                    </div>
+                </div>
+
+                <!-- Detox Tea 상품들 -->
+                <div class="product-card" data-category="detox-tea">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop"
+                        alt="Relax & Renew">
+                    <div class="product-info">
+                        <h3>Relax & Renew</h3>
+                        <p>유기농 허브 블렌드로 몸과 마음을 정화하세요</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="detox-tea">
+                    <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=400&h=300&fit=crop"
+                        alt="Green Harmony">
+                    <div class="product-info">
+                        <h3>Green Harmony</h3>
+                        <p>녹차와 레몬그라스의 상쾌한 만남</p>
+                    </div>
+                </div>
+
+                <!-- Coffee 상품들 -->
+                <div class="product-card" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop"
+                        alt="Single Origin">
+                    <div class="product-info">
+                        <h3>Single Origin</h3>
+                        <p>에티오피아산 원두로 추출한 깊고 풍부한 향</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop"
+                        alt="Mocha Blend">
+                    <div class="product-info">
+                        <h3>Mocha Blend</h3>
+                        <p>초콜릿과 에스프레소의 완벽한 하모니</p>
+                    </div>
+                </div>
+
+                <!-- Icecream 상품들 -->
+                <div class="product-card" data-category="icecream">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop"
+                        alt="Artisanal Gelato">
+                    <div class="product-info">
+                        <h3>Artisanal Gelato</h3>
+                        <p>신선한 재료로 만든 크리미한 젤라또</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="icecream">
+                    <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=400&h=300&fit=crop"
+                        alt="Chocolate Sorbet">
+                    <div class="product-info">
+                        <h3>Chocolate Sorbet</h3>
+                        <p>비건 초콜릿 셔벗, 진한 카카오의 맛</p>
+                    </div>
+                </div>
+
+                <!-- Dessert 상품들 -->
+                <div class="product-card" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop"
+                        alt="Chocolate Cake">
+                    <div class="product-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>촉촉한 초콜릿 케이크와 가나슈 토핑</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&h=300&fit=crop"
+                        alt="Brownie Supreme">
+                    <div class="product-info">
+                        <h3>Brownie Supreme</h3>
+                        <p>쫀득한 식감의 진한 브라우니</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 데스크탑 슬라이더 네비게이션 -->
+            <button class="slider-nav prev" id="prev-btn">❮</button>
+            <button class="slider-nav next" id="next-btn">❯</button>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
