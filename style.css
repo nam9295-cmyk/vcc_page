@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 1. 스크롤 영역 확보 (높이를 400vh~500vh 정도로 길게 잡아야 부드럽습니다) */
+.scroll-container {
+    height: 250vh;
+    /* 기본적으로 모바일용 (스크롤 애니메이션용) */
+    position: relative;
+}
+
+/* 데스크탑: 스크롤 애니메이션 대신 영상 재생 (전체 높이 100vh로 고정) */
+@media (min-width: 1024px) {
+    .scroll-container {
+        height: 100vh;
+    }
+}
+
+/* 2. 비디오를 화면에 고정 (Sticky) */
+.sticky-wrapper {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 화면 꽉 채우기 */
+}
+
+/* 안내 문구 */
+.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    pointer-events: none;
+    /* 클릭 방해 안 하게 */
+}
+
+/* 하단 콘텐츠 */
+.content-section {
+    height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+/* ========== 초콜릿 배지 스타일 ========== */
+.scroll-badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.choco-badge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(100vh);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    /* 초콜릿 모양 배지 */
+    background: linear-gradient(145deg, #5D3A1A, #3E2512);
+    padding: 16px 28px;
+    border-radius: 20px;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.1),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+
+    /* 골드 테두리 */
+    border: 2px solid #C9A050;
+}
+
+.choco-badge span {
+    font-family: 'Georgia', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #F5DEB3;
+    /* 밀크 베이지 텍스트 */
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(201, 160, 80, 0.3);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* 데스크탑에서는 배지 숨김 */
+@media (min-width: 1024px) {
+    .scroll-badges {
+        display: none;
+    }
+}
