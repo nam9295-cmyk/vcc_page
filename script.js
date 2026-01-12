@@ -253,20 +253,36 @@ if (mobileNavOverlay) {
 }
 
 // 사이드 메뉴 링크 클릭 시 해당 탭으로 이동
+// 사이드 메뉴 링크 클릭 시 해당 탭으로 이동
 const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetTab = link.getAttribute('href').replace('#', '');
-        const tabBtn = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
-        if (tabBtn) {
-            tabBtn.click();
-            // 메뉴 섹션으로 스크롤
-            const menuSection = document.querySelector('.menu-section');
-            if (menuSection) {
-                menuSection.scrollIntoView({ behavior: 'smooth' });
-            }
+        const href = link.getAttribute('href');
+
+        // 블로그 링크면 기본 동작 허용 (페이지 이동)
+        if (href === 'blog.html') {
+            closeMobileNav();
+            return;
         }
-        closeMobileNav();
+
+        // 그 외 (앵커 링크 등)는 탭 전환 로직 시도
+        if (href.includes('#')) {
+            e.preventDefault();
+            const targetId = href.split('#')[1];
+            const tabBtn = document.querySelector(`.tab-btn[data-tab="${targetId}"]`);
+
+            if (tabBtn) {
+                tabBtn.click();
+                // 메뉴 섹션으로 스크롤
+                const menuSection = document.querySelector('.menu-section');
+                if (menuSection) {
+                    menuSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // 탭버튼이 없으면(예: 외부에서 왔거나 다른 동작) 그냥 이동
+                window.location.href = href;
+            }
+            closeMobileNav();
+        }
     });
 });

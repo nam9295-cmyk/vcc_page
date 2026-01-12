@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베리굿초콜릿 - 블로그</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== 헤더 (항상 보임) ========== -->
+    <header class="site-header visible" id="site-header">
+        <button class="hamburger-menu" id="hamburger-btn" aria-label="메뉴">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Very Goût">
+            </a>
+        </div>
+        <div class="header-spacer"></div>
+    </header>
+
+    <!-- 모바일 사이드 메뉴 -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <button class="close-menu" id="close-menu-btn">×</button>
+        <ul>
+            <li><a href="index.html#signature">SIGNATURE</a></li>
+            <li><a href="index.html#detox-tea">DETOX TEA</a></li>
+            <li><a href="index.html#coffee">COFFEE</a></li>
+            <li><a href="index.html#icecream">ICECREAM</a></li>
+            <li><a href="index.html#dessert">DESSERT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- ========== 블로그 컨텐츠 ========== -->
+    <section class="blog-section">
+        <h2 class="section-title">BLOG</h2>
+        <div class="blog-grid" id="blog-grid">
+            <!-- 자바스크립트로 로드된 데이터가 여기에 들어갑니다 -->
+            <div class="loading-spinner">데이터를 불러오는 중입니다...</div>
+        </div>
+    </section>
+
+    <script type="module" src="blog.js"></script>
+    <!-- 헤더 동작을 위한 공통 스크립트 -->
+    <script>
+        // 모바일 메뉴 토글 (index.html의 script.js에서 일부 가져옴)
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+
+        function openMobileNav() {
+            if (mobileNav) mobileNav.classList.add('open');
+            if (mobileNavOverlay) mobileNavOverlay.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            if (mobileNav) mobileNav.classList.remove('open');
+            if (mobileNavOverlay) mobileNavOverlay.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburgerBtn) hamburgerBtn.addEventListener('click', openMobileNav);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileNav);
+        if (mobileNavOverlay) mobileNavOverlay.addEventListener('click', closeMobileNav);
+    </script>
+</body>
+
+</html>
