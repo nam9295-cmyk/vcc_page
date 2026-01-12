@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Story | 베리굿초콜릿</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+
+        .story-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .story-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .story-text {
+            flex: 1;
+        }
+
+        .story-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .story-text p {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.05rem;
+        }
+
+        .story-image {
+            flex: 1;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .story-section {
+                flex-direction: column !important;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header" style="background: rgba(0,0,0,0.8);">
+        <div class="header-logo" style="margin: 0 auto;">
+            <a href="index.html"><img src="logo.png" alt="Very Goût" style="height: 50px;"></a>
+        </div>
+    </header>
+
+    <div class="story-container">
+
+        <div class="story-section">
+            <div class="story-text">
+                <h2>The Beginning</h2>
+                <p>
+                    "초콜릿은 왜 항상 달기만 할까?"라는 작은 물음에서 시작되었습니다.
+                    카카오 본연의 씁쓸하면서도 깊은 풍미, 그 안에 숨겨진 다채로운 향미를 소개하고 싶었습니다.
+                    베리굿초콜릿은 대구 수성구의 작은 공방에서 시작하여, 이제는 많은 분들에게 사랑받는 프리미엄 디저트 브랜드로 성장했습니다.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=800&q=80" alt="초콜릿 만들기">
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-text">
+                <h2>Harmony with Tea</h2>
+                <p>
+                    단순히 단맛을 중화시키는 것을 넘어, 초콜릿의 맛을 한층 더 끌어올려주는 '마리아주'를 찾았습니다.
+                    베리굿초콜릿만의 시그니처 '디톡스 티'는 엄선된 허브와 과일을 블렌딩하여,
+                    초콜릿을 즐긴 후의 입안을 깔끔하게 정리해줍니다. 건강과 맛, 두 마리 토끼를 잡은 완벽한 조화를 경험해보세요.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=80" alt="티 타임">
+            </div>
+        </div>
+
+        <div class="story-section">
+            <div class="story-text">
+                <h2>Our Mission</h2>
+                <p>
+                    우리는 단순히 초콜릿을 파는 것이 아니라, '달콤한 행복'을 전합니다.
+                    지친 일상 속에서 한 조각의 초콜릿이 주는 위로, 소중한 사람과 나누는 티타임의 여유.
+                    베리굿초콜릿이 여러분의 가장 달콤한 순간과 함께하겠습니다.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1481391319719-6b9b2d5a1971?w=800&q=80" alt="행복한 순간">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
