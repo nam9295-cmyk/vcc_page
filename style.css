@@ -665,3 +665,128 @@ video {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ========== 오시는 길 (Location) 섹션 ========== */
+.location-section {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.location-title {
+    font-family: 'Addington CF', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3E2512;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+}
+
+.location-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.location-text {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.location-map-link {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.location-map-link:hover {
+    transform: scale(1.02);
+}
+
+.location-map {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+/* ========== Contact Us 섹션 ========== */
+.contact-section {
+    background-color: #FFFBF5;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3E2512;
+}
+
+.submit-btn {
+    background-color: #3E2512;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: #5a3e2b;
+    transform: translateY(-2px);
+}
+
+/* ========== 하단 정보 섹션 Wrapper (데스크탑 좌우 배치) ========== */
+@media (min-width: 1024px) {
+    .info-section-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        /* 섹션 간의 배경색이 달라서 갭 없이 붙이거나 분리 가능 */
+        background-color: #FFFBF5;
+        /* 전체 배경 일치 */
+    }
+
+    /* 데스크탑에서는 개별 섹션 패딩 조정 */
+    .location-section,
+    .contact-section {
+        background-color: transparent;
+        /* Wrapper 배경 사용 */
+        padding: 80px 40px;
+    }
+
+    /* 경계선 추가 (선택사항) */
+    .location-section {
+        border-right: 1px solid #eee;
+    }
+}

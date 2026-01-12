@@ -286,3 +286,40 @@ mobileNavLinks.forEach(link => {
         }
     });
 });
+
+// ========== Contact Form (Formspree AJAX) ==========
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const status = document.createElement('div'); // 상태 메시지 표시용 (필요 시 사용)
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert("메일이 성공적으로 전송되었습니다! 곧 연락드리겠습니다.");
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    alert("전송 중 오류가 발생했습니다: " + data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("전송 중 알 수 없는 오류가 발생했습니다.");
+                }
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert("서버 연결에 실패했습니다. 다시 시도해 주세요.");
+        }
+    });
+}
