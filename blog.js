@@ -48,7 +48,7 @@ async function fetchBlogPosts() {
 
         querySnapshot.forEach((doc) => {
             const post = doc.data();
-            const card = createBlogCard(post);
+            const card = createBlogCard(post, doc.id);
             blogGrid.appendChild(card);
         });
 
@@ -63,23 +63,41 @@ async function fetchBlogPosts() {
 }
 
 // 블로그 카드 생성 함수
-function createBlogCard(post) {
+function createBlogCard(post, docId) {
+    const cardLink = document.createElement('a');
+    cardLink.href = `blog-detail.html?id=${docId}`;
+    cardLink.className = 'blog-card-link'; // 스타일링을 위해 클래스 추가 (필요시 CSS 추가)
+    cardLink.style.textDecoration = 'none';
+    cardLink.style.color = 'inherit';
+    cardLink.style.display = 'block';
+
     const card = document.createElement('div');
     card.className = 'blog-card';
 
     // 이미지가 없으면 플레이스홀더 사용
     const imageUrl = post.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image';
 
+    // 요약문이 없으면 본문에서 태그 제거하고 앞부분만 자름 (하위 호환성)
+    let summaryText = post.summary;
+    if (!summaryText && post.content) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = post.content;
+        summaryText = tempDiv.textContent.substring(0, 100) + '...';
+    }
+
     card.innerHTML = `
-        <img src="${imageUrl}" alt="${post.title}" class="blog-thumb" loading="lazy">
+        <div class="blog-thumb-wrapper">
+            <img src="${imageUrl}" alt="${post.title}" class="blog-thumb" loading="lazy">
+        </div>
         <div class="blog-content">
             <h3 class="blog-title">${post.title}</h3>
             <div class="blog-date">${formatDate(post.date)}</div>
-            <p class="blog-summary">${post.content}</p>
+            <p class="blog-summary">${summaryText || ''}</p>
         </div>
     `;
 
-    return card;
+    cardLink.appendChild(card);
+    return cardLink;
 }
 
 // 초기화
