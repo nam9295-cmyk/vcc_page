@@ -30,7 +30,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #FFFBF5;
     color: #fff;
     font-family: 'Pretendard', sans-serif;
 }
@@ -297,7 +297,7 @@ video {
 .menu-section {
     background: #FFFBF5;
     padding: 60px 20px;
-    min-height: 100vh;
+    /* min-height: 100vh; 제거 */
 }
 
 .menu-brand {
@@ -350,30 +350,49 @@ video {
     margin: 0 auto;
 }
 
-/* 상품 리스트 - 모바일: 세로 리스트 */
+/* 상품 리스트 - 모바일: 가로 슬라이더 (2개씩 보임) */
 .product-list {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5px 20px 5px;
+    /* 그림자 잘리지 않게 패딩 추가 */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox 스크롤바 숨김 */
+    -ms-overflow-style: none;
+    /* IE/Edge 스크롤바 숨김 */
+}
+
+.product-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari 스크롤바 숨김 */
 }
 
 /* 상품 카드 */
 .product-card {
+    flex: 0 0 calc(50% - 15px);
+    /* 2개씩 보이도록 너비 설정 (gap 고려) */
+    min-width: calc(50% - 15px);
+    scroll-snap-align: start;
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(62, 37, 18, 0.1);
+    box-shadow: 0 4px 10px rgba(62, 37, 18, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(62, 37, 18, 0.15);
+    box-shadow: 0 8px 20px rgba(62, 37, 18, 0.15);
 }
 
 .product-card img {
     width: 100%;
-    height: 200px;
+    height: 150px;
+    /* 모바일에서는 이미지 높이를 조금 줄임 */
     object-fit: cover;
 }
 
@@ -599,5 +618,50 @@ video {
     text-align: center;
     padding: 50px;
     color: #A89585;
+
     font-size: 1.1rem;
+}
+
+/* ========== 메인 페이지 최신 블로그 섹션 ========== */
+.latest-blog-section {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px 80px;
+    background-color: #FFFBF5;
+}
+
+.latest-blog-section .section-title {
+    color: #3E2512;
+}
+
+.latest-blog-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+}
+
+/* 모바일: 최신 글 1개만 표시 */
+@media (max-width: 767px) {
+    .latest-blog-grid {
+        display: block;
+    }
+
+    .latest-blog-grid>.blog-card-link:not(:first-child) {
+        display: none;
+    }
+}
+
+/* 태블릿: 2열 */
+@media (min-width: 768px) {
+    .latest-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 데스크탑: 3열 */
+@media (min-width: 1024px) {
+    .latest-blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

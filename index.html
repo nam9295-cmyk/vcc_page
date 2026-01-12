@@ -260,6 +260,107 @@
         </div>
     </section>
 
+    <!-- ========== 최신 블로그 섹션 ========== -->
+    <section class="latest-blog-section">
+        <h2 class="section-title">LATEST STORIES</h2>
+        <div class="latest-blog-grid" id="latest-blog-grid">
+            <!-- 자바스크립트로 로드된 데이터가 여기에 들어갑니다 -->
+            <div class="loading-spinner">Loading...</div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBCZdp-mfMX8BHu1Wv2BvQVVJVT9E6TT7E",
+            authDomain: "verygood-d36c5.firebaseapp.com",
+            projectId: "verygood-d36c5",
+            storageBucket: "verygood-d36c5.firebasestorage.app",
+            messagingSenderId: "789302109242",
+            appId: "1:789302109242:web:9c466ca4c5cabba1cdc103",
+            measurementId: "G-H6HKSZYN39"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        const latestBlogGrid = document.getElementById('latest-blog-grid');
+
+        function formatDate(timestamp) {
+            if (!timestamp) return '';
+            const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+            return date.toLocaleDateString('ko-KR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        async function fetchLatestPosts() {
+            try {
+                const q = query(collection(db, "drink_stories"), orderBy("date", "desc"), limit(3));
+                const querySnapshot = await getDocs(q);
+
+                latestBlogGrid.innerHTML = '';
+
+                if (querySnapshot.empty) {
+                    latestBlogGrid.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">등록된 글이 없습니다.</p>';
+                    return;
+                }
+
+                querySnapshot.forEach((doc) => {
+                    const post = doc.data();
+                    const card = createBlogCard(post, doc.id);
+                    latestBlogGrid.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error("Error fetching posts:", error);
+                latestBlogGrid.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">글을 불러오는데 실패했습니다.</p>';
+            }
+        }
+
+        function createBlogCard(post, docId) {
+            const cardLink = document.createElement('a');
+            cardLink.href = `blog-detail.html?id=${docId}`;
+            cardLink.className = 'blog-card-link';
+            cardLink.style.textDecoration = 'none';
+            cardLink.style.color = 'inherit';
+
+            // 모바일에서 첫 번째 요소만 보이게 하는 건 CSS로 처리했음 (.latest-blog-grid > *:not(:first-child))
+
+            const card = document.createElement('div');
+            card.className = 'blog-card';
+
+            const imageUrl = post.imageUrl || 'https://via.placeholder.com/400x300?text=No+Image';
+
+            let summaryText = post.summary;
+            if (!summaryText && post.content) {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = post.content;
+                summaryText = tempDiv.textContent.substring(0, 80) + '...';
+            }
+
+            card.innerHTML = `
+                <div class="blog-thumb-wrapper">
+                    <img src="${imageUrl}" alt="${post.title}" class="blog-thumb" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">${post.title}</h3>
+                    <div class="blog-date">${formatDate(post.date)}</div>
+                    <p class="blog-summary">${summaryText || ''}</p>
+                </div>
+            `;
+
+            cardLink.appendChild(card);
+            return cardLink;
+        }
+
+        fetchLatestPosts();
+    </script>
+
     <script src="script.js"></script>
 </body>
 
