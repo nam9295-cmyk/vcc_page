@@ -607,6 +607,7 @@ video {
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     /* 3줄까지만 표시 */
     -webkit-box-orient: vertical;
     overflow: hidden;
