@@ -207,10 +207,10 @@ function updateHeaderVisibility() {
     const scrollContainerBottom = scrollContainer.offsetTop + scrollContainer.offsetHeight;
     const currentScroll = window.scrollY + window.innerHeight;
 
-    // 스크롤 컨테이너가 거의 끝날 때 헤더 표시
-    // 모바일: 스크롤이 90% 진행되면 (거의 끝날 때)
-    // 데스크탑: 스크롤 컨테이너를 지나면
-    const threshold = isDesktop ? scrollContainerBottom - 100 : scrollContainer.offsetHeight * 0.9;
+    // 메인 이미지 영역(스크롤 컨테이너)이 끝날 때 헤더 표시
+    // 모바일: 스크롤 컨테이너의 높이만큼 스크롤 되었을 때
+    // 데스크탑: 동일하게 적용 (Sticky 영역이 끝날 때)
+    const threshold = scrollContainer.offsetHeight - 50; // 약간의 여유를 둠
 
     if (window.scrollY > threshold) {
         siteHeader.classList.add('visible');
