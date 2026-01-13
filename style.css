@@ -799,3 +799,24 @@ video {
         border-right: 1px solid #eee;
     }
 }
+
+/* ========== 블로그 더보기 버튼 ========== */
+.blog-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 1px solid #3E2512;
+    color: #3E2512;
+    text-decoration: none;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.blog-more-btn:hover {
+    background-color: #3E2512;
+    color: #fff;
+    transform: translateY(-2px);
+}
