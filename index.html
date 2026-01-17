@@ -45,26 +45,115 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) - LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://kr.verygood-chocolate.com/#localbusiness",
+      "name": "베리굿초콜릿",
+      "alternateName": ["Very Good Chocolate", "VCC", "베리굿 초콜릿"],
+      "url": "https://kr.verygood-chocolate.com",
+      "logo": "https://kr.verygood-chocolate.com/logo.png",
+      "image": ["https://kr.verygood-chocolate.com/logo.png", "https://github.com/nam9295-cmyk/asset/blob/main/vcc_thumb.png?raw=true"],
+      "description": "대구 수성구에 위치한 프리미엄 수제 초콜릿 전문점. 벨기에산 커버춰 초콜릿을 사용하여 카카오 농도 조절이 가능한 다크쇼콜라, 말차쇼콜라와 커피, 아이스크림을 제공합니다.",
+      "email": "contact@verygood-chocolate.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "상록로11길 13, 1층",
+        "addressLocality": "대구광역시 수성구",
+        "postalCode": "42111",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.8498,
+        "longitude": 128.6305
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "priceRange": "₩₩",
+      "servesCuisine": ["초콜릿", "디저트", "카페", "아이스크림"],
+      "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Samsung Pay", "Kakao Pay"],
+      "currenciesAccepted": "KRW",
+      "foundingDate": "2023",
+      "sameAs": [
+        "https://smartstore.naver.com/verygout"
+      ],
+      "hasMenu": "https://smartstore.naver.com/verygout"
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
       "name": "베리굿초콜릿",
       "alternateName": "Very Good Chocolate",
       "url": "https://kr.verygood-chocolate.com",
       "logo": "https://kr.verygood-chocolate.com/logo.png",
-      "image": "https://github.com/nam9295-cmyk/asset/blob/main/vcc_thumb.png?raw=true",
-      "description": "대구 수성구에 위치한 프리미엄 수제 초콜릿 전문점",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "상록로11길 13, 1층",
-        "addressLocality": "대구광역시",
-        "addressRegion": "수성구",
-        "addressCountry": "KR"
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@verygood-chocolate.com",
+        "contactType": "customer service",
+        "availableLanguage": "Korean"
       },
-      "priceRange": "₩₩",
-      "servesCuisine": "초콜릿, 디저트, 카페"
+      "knowsAbout": ["수제 초콜릿", "벨기에 커버춰 초콜릿", "카카오 농도 조절", "카페 디저트", "아이스크림"]
+    }
+    </script>
+
+    <!-- Structured Data (JSON-LD) - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "베리굿초콜릿 영업시간은 어떻게 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "평일 오전 8시부터 오후 6시까지 영업합니다 (08:00 - 18:00). 주말 및 공휴일은 휴무입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "베리굿초콜릿에서는 어떤 종류의 초콜릿을 판매하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "벨기에산 프리미엄 커버춰 초콜릿을 사용하여 다크쇼콜라, 말차쇼콜라 등 다양한 시그니처 초콜릿 음료를 판매합니다. 카카오 농도(당도)를 33% 밀크부터 100% 다크까지 취향대로 조절할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "베리굿초콜릿 위치가 어디인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "대구광역시 수성구 상록로11길 13, 1층에 위치해 있습니다. 네이버 지도에서 '베리굿초콜릿'을 검색하시면 쉽게 찾아오실 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "온라인으로 주문할 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 네이버 스마트스토어(smartstore.naver.com/verygout)에서 온라인 주문이 가능합니다. 선물 세트, 답례품 등 다양한 상품을 구매하실 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "답례품이나 맞춤 선물 서비스가 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 결혼 답례품, 기업 선물, 원데이 클래스 등 맞춤 서비스를 제공합니다. 홈페이지 하단의 문의하기를 통해 상담 신청해주세요."
+          }
+        }
+      ]
     }
     </script>
 </head>
@@ -98,35 +187,37 @@
     </nav>
     <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
-    <div class="scroll-container">
-        <div class="sticky-wrapper">
-            <video id="hero-video" muted playsinline preload="auto">
-                <source src="https://github.com/nam9295-cmyk/asset/raw/refs/heads/main/freepik__-__95730.mp4"
-                    type="video/mp4">
-            </video>
+    <main id="main-content" role="main">
+        <div class="scroll-container">
+            <div class="sticky-wrapper">
+                <video id="hero-video" muted playsinline preload="auto">
+                    <source src="https://github.com/nam9295-cmyk/asset/raw/refs/heads/main/freepik__-__95730.mp4"
+                        type="video/mp4">
+                </video>
 
-            <!-- 중앙 로고 -->
-            <div class="hero-logo">
-                <img src="logo.png" alt="베리굿초콜릿 VCC 로고">
-            </div>
+                <!-- 중앙 로고 -->
+                <div class="hero-logo">
+                    <img src="logo.png" alt="베리굿초콜릿 VCC 로고">
+                </div>
 
-            <!-- 스크롤 텍스트 배지들 (모바일 전용) -->
-            <div class="scroll-badges">
-                <div class="choco-badge" data-appear="0.1">
-                    <span>Cacao 100%</span>
-                </div>
-                <div class="choco-badge" data-appear="0.3">
-                    <span>Cacao 70.5%</span>
-                </div>
-                <div class="choco-badge" data-appear="0.5">
-                    <span>Cacao 57.9%</span>
-                </div>
-                <div class="choco-badge" data-appear="0.7">
-                    <span>Milk Chocolate</span>
+                <!-- 스크롤 텍스트 배지들 (모바일 전용) -->
+                <div class="scroll-badges">
+                    <div class="choco-badge" data-appear="0.1">
+                        <span>Cacao 100%</span>
+                    </div>
+                    <div class="choco-badge" data-appear="0.3">
+                        <span>Cacao 70.5%</span>
+                    </div>
+                    <div class="choco-badge" data-appear="0.5">
+                        <span>Cacao 57.9%</span>
+                    </div>
+                    <div class="choco-badge" data-appear="0.7">
+                        <span>Milk Chocolate</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- ========== 메뉴 섹션 ========== -->
     <section class="menu-section">
@@ -482,6 +573,126 @@
             </div>
         </section>
     </div>
+
+    <!-- ========== FAQ 섹션 (GEO 최적화) ========== -->
+    <section class="faq-section" aria-labelledby="faq-title">
+        <style>
+            .faq-section {
+                max-width: 900px;
+                margin: 60px auto;
+                padding: 40px 20px;
+            }
+
+            .faq-section .section-title {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #3E2512;
+                margin-bottom: 40px;
+            }
+
+            .faq-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .faq-item {
+                background: #faf7f2;
+                border-radius: 12px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .faq-item[open] {
+                box-shadow: 0 4px 15px rgba(74, 63, 53, 0.1);
+            }
+
+            .faq-item summary {
+                padding: 20px 25px;
+                cursor: pointer;
+                font-weight: 600;
+                color: #4a3f35;
+                font-size: 1.05rem;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background 0.2s;
+            }
+
+            .faq-item summary::-webkit-details-marker {
+                display: none;
+            }
+
+            .faq-item summary::after {
+                content: '+';
+                font-size: 1.5rem;
+                font-weight: 300;
+                color: #8c857f;
+                transition: transform 0.3s;
+            }
+
+            .faq-item[open] summary::after {
+                content: '−';
+            }
+
+            .faq-item summary:hover {
+                background: #f5f0e8;
+            }
+
+            .faq-answer {
+                padding: 0 25px 20px;
+                color: #555;
+                line-height: 1.7;
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 768px) {
+                .faq-section {
+                    margin: 40px 15px;
+                    padding: 30px 15px;
+                }
+
+                .faq-item summary {
+                    padding: 15px 18px;
+                    font-size: 0.95rem;
+                }
+
+                .faq-answer {
+                    padding: 0 18px 15px;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+
+        <h2 id="faq-title" class="section-title">자주 묻는 질문</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>베리굿초콜릿 영업시간은 어떻게 되나요?</summary>
+                <p class="faq-answer">평일 오전 8시부터 오후 6시까지 영업합니다 (08:00 - 18:00). 주말 및 공휴일은 휴무이며, 명절 등 특별 휴무일은 공지사항을
+                    확인해주세요.</p>
+            </details>
+            <details class="faq-item">
+                <summary>어떤 종류의 초콜릿을 판매하나요?</summary>
+                <p class="faq-answer">벨기에산 프리미엄 커버춰 초콜릿을 사용하여 다크쇼콜라, 말차쇼콜라 등 다양한 시그니처 초콜릿 음료를 판매합니다. 특별히 카카오 농도(당도)를 33%
+                    밀크부터 100% 다크까지 취향대로 조절할 수 있어 나만의 초콜릿을 즐길 수 있습니다. 커피와 아이스크림도 함께 제공합니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary>베리굿초콜릿 위치가 어디인가요?</summary>
+                <p class="faq-answer">대구광역시 수성구 상록로11길 13, 1층에 위치해 있습니다. 네이버 지도에서 '베리굿초콜릿'을 검색하시면 쉽게 찾아오실 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary>온라인으로 주문할 수 있나요?</summary>
+                <p class="faq-answer">네, 네이버 스마트스토어(<a href="https://smartstore.naver.com/verygout" target="_blank"
+                        style="color: #5D3A1A;">smartstore.naver.com/verygout</a>)에서 온라인 주문이 가능합니다. 선물 세트, 답례품 등 다양한 상품을
+                    구매하실 수 있습니다.</p>
+            </details>
+            <details class="faq-item">
+                <summary>답례품이나 맞춤 선물 서비스가 있나요?</summary>
+                <p class="faq-answer">네, 결혼 답례품, 기업 선물, 원데이 클래스 등 맞춤 서비스를 제공합니다. 홈페이지 하단의 문의하기를 통해 상담 신청해주세요.</p>
+            </details>
+        </div>
+    </section>
 
     <!-- ========== Footer (Legal & Info) ========== -->
     <footer class="site-footer"
