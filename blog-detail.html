@@ -13,7 +13,21 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Very Goût - Blog Detail</title>
+    <title>베리굿초콜릿 블로그</title>
+    <meta name="description" id="meta-description" content="베리굿초콜릿 블로그 글">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" id="canonical-url" href="https://kr.verygood-chocolate.com/blog-detail.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" id="og-title" content="베리굿초콜릿 블로그">
+    <meta property="og:description" id="og-description" content="베리굿초콜릿 블로그 글">
+    <meta property="og:url" id="og-url" content="https://kr.verygood-chocolate.com/blog-detail.html">
+    <meta property="og:site_name" content="베리굿초콜릿">
+    <meta property="og:image" id="og-image"
+        content="https://github.com/nam9295-cmyk/asset/blob/main/vcc_thumb.png?raw=true">
+
     <!-- Quill CSS (for consistent styling of content) -->
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- Favicon -->
@@ -104,7 +118,7 @@
         </button>
         <div class="header-logo">
             <a href="index.html">
-                <img src="logo.png" alt="Very Goût">
+                <img src="logo.png" alt="베리굿초콜릿 로고">
             </a>
         </div>
         <div class="header-spacer"></div>
@@ -181,6 +195,38 @@
 
                 if (docSnap.exists()) {
                     const post = docSnap.data();
+
+                    // 동적 SEO 메타태그 업데이트
+                    const pageTitle = `${post.title} | 베리굿초콜릿 블로그`;
+                    document.title = pageTitle;
+
+                    // 요약 텍스트 생성
+                    let summaryText = post.summary;
+                    if (!summaryText && post.content) {
+                        const tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = post.content;
+                        summaryText = tempDiv.textContent.substring(0, 150) + '...';
+                    }
+
+                    // Meta Description 업데이트
+                    const metaDesc = document.getElementById('meta-description');
+                    if (metaDesc) metaDesc.setAttribute('content', summaryText || '베리굿초콜릿 블로그 글');
+
+                    // Canonical URL 업데이트
+                    const canonicalUrl = `https://kr.verygood-chocolate.com/blog-detail.html?id=${postId}`;
+                    const canonical = document.getElementById('canonical-url');
+                    if (canonical) canonical.setAttribute('href', canonicalUrl);
+
+                    // Open Graph 태그 업데이트
+                    const ogTitle = document.getElementById('og-title');
+                    const ogDesc = document.getElementById('og-description');
+                    const ogUrl = document.getElementById('og-url');
+                    const ogImage = document.getElementById('og-image');
+
+                    if (ogTitle) ogTitle.setAttribute('content', pageTitle);
+                    if (ogDesc) ogDesc.setAttribute('content', summaryText || '베리굿초콜릿 블로그 글');
+                    if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+                    if (ogImage && post.imageUrl) ogImage.setAttribute('content', post.imageUrl);
 
                     postContainer.innerHTML = `
                         <div class="post-header">
