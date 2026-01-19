@@ -1,0 +1,16 @@
+{
+    "version": 1,
+    "include": [
+        "/*"
+    ],
+    "exclude": [
+        "/assets/*",
+        "/fonts/*",
+        "/product/*",
+        "/*.png",
+        "/*.txt",
+        "/*.xml",
+        "/*.json",
+        "/_redirects"
+    ]
+}

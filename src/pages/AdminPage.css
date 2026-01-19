@@ -1,0 +1,142 @@
+.admin-page {
+    background: #FFFBF5;
+    min-height: 100vh;
+    padding: 100px 20px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.admin-page h1 {
+    font-family: 'Addington CF', Georgia, serif;
+    font-size: 2rem;
+    color: #3E2512;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Login Box */
+.login-box {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(62, 37, 18, 0.1);
+    text-align: center;
+}
+
+.login-box h1 {
+    margin-bottom: 30px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 15px;
+    background: #3E2512;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #5D3A1A;
+}
+
+/* Add Post Section */
+.add-post-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(62, 37, 18, 0.08);
+    margin-bottom: 40px;
+}
+
+.add-post-section h2 {
+    color: #3E2512;
+    margin-bottom: 20px;
+}
+
+.add-post-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-post-section input,
+.add-post-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.add-post-section button {
+    padding: 15px;
+    background: #3E2512;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-post-section button:hover {
+    background: #5D3A1A;
+}
+
+/* Posts List */
+.posts-list-section h2 {
+    color: #3E2512;
+    margin-bottom: 20px;
+}
+
+.posts-table {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(62, 37, 18, 0.08);
+}
+
+.post-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-title {
+    color: #333;
+    font-weight: 500;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}

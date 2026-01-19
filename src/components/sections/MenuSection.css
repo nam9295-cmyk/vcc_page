@@ -1,0 +1,156 @@
+/* ========== 메뉴 섹션 스타일 ========== */
+.menu-section {
+    background: #FFFBF5;
+    padding: 60px 20px;
+}
+
+.menu-brand {
+    text-align: center;
+    font-family: 'Addington CF', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #3E2512;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+/* 탭 네비게이션 */
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #E5D5C5;
+    padding-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-family: 'Addington CF', Georgia, serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #A89585;
+    cursor: pointer;
+    padding: 8px 4px;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.tab-btn:hover {
+    color: #5D3A1A;
+}
+
+.tab-btn.active {
+    color: #3E2512;
+    font-weight: bold;
+}
+
+/* 상품 컨테이너 */
+.product-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 상품 리스트 - 모바일: 가로 슬라이더 (2개씩 보임) */
+.product-list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5px 20px 5px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.product-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* 슬라이더 네비게이션 버튼 - 모바일에서는 숨김 */
+.slider-nav {
+    display: none;
+}
+
+/* ========== 데스크탑 레이아웃 ========== */
+@media (min-width: 1024px) {
+    .menu-section {
+        padding: 80px 60px;
+    }
+
+    .menu-brand {
+        font-size: 3rem;
+    }
+
+    .menu-tabs {
+        gap: 15px;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        font-size: 3.5rem;
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 10px 0;
+        line-height: 1.2;
+    }
+
+    .product-container {
+        overflow: hidden;
+        padding: 0 50px;
+    }
+
+    .product-list {
+        flex-direction: row;
+        gap: 30px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 20px 10px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .product-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 슬라이더 네비게이션 버튼 - 데스크탑에서 표시 */
+    .slider-nav {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid #E5D5C5;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        color: #5D3A1A;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .slider-nav:hover {
+        background: #3E2512;
+        color: #fff;
+    }
+
+    .slider-nav.prev {
+        left: 0;
+    }
+
+    .slider-nav.next {
+        right: 0;
+    }
+}

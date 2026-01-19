@@ -1,0 +1,71 @@
+.latest-blog-section {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px 80px;
+    background-color: #FFFBF5;
+}
+
+.latest-blog-section .section-title {
+    color: #3E2512;
+}
+
+.latest-blog-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+}
+
+.blog-more-btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.blog-more-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #3E2512;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.blog-more-btn:hover {
+    background: #5D3A1A;
+    transform: translateY(-2px);
+}
+
+.loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #A89585;
+    font-size: 1.1rem;
+}
+
+/* 모바일: 최신 글 1개만 표시 */
+@media (max-width: 767px) {
+    .latest-blog-grid {
+        display: block;
+    }
+
+    .latest-blog-grid>*:not(:first-child) {
+        display: none;
+    }
+}
+
+/* 태블릿: 2열 */
+@media (min-width: 768px) {
+    .latest-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 데스크탑: 3열 */
+@media (min-width: 1024px) {
+    .latest-blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
