@@ -12,10 +12,11 @@ function AdminPage() {
         title: '',
         content: '',
         imageUrl: '',
-        summary: ''
+        summary: '',
+        mode: 'regular' // 'regular' (default) or 'editorial'
     });
 
-    const ADMIN_PASSWORD = 'vcc2023'; // 실제로는 환경변수 사용 권장
+    const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'vcc2023'; // 환경변수 사용, 없으면 기본값
 
     const handleLogin = () => {
         if (password === ADMIN_PASSWORD) {
@@ -56,7 +57,7 @@ function AdminPage() {
                 date: serverTimestamp()
             });
 
-            setNewPost({ title: '', content: '', imageUrl: '', summary: '' });
+            setNewPost({ title: '', content: '', imageUrl: '', summary: '', mode: 'regular' });
             fetchPosts();
             alert('글이 등록되었습니다.');
         } catch (error) {
@@ -134,6 +135,17 @@ function AdminPage() {
                             onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
                             required
                         ></textarea>
+                        <div style={{ margin: '10px 0' }}>
+                            <label style={{ marginRight: '10px' }}>게시글 모드: </label>
+                            <select
+                                value={newPost.mode}
+                                onChange={(e) => setNewPost({ ...newPost, mode: e.target.value })}
+                                style={{ padding: '5px' }}
+                            >
+                                <option value="regular">일반 글 (자동 이미지 배치)</option>
+                                <option value="editorial">에디토리얼 (매거진 HTML)</option>
+                            </select>
+                        </div>
                         <button type="submit">등록</button>
                     </form>
                 </section>

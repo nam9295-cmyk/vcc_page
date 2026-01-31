@@ -188,3 +188,24 @@
     font-size: 1.2rem;
     font-family: var(--essay-font-serif);
 }
+
+/* ========== Editorial Mode Styles ========== */
+.post-content.editorial {
+    text-align: left;
+    max-width: 100%;
+}
+
+.post-content.editorial img {
+    float: none !important;
+    width: auto !important;
+    max-width: 100%;
+    margin: 1em auto !important;
+    box-shadow: none;
+    border-radius: 0;
+    display: block;
+}
+
+.post-content.editorial p {
+    text-align: left;
+    margin-bottom: 1em;
+}

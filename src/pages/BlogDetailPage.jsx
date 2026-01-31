@@ -5,6 +5,17 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import './BlogDetailPage.css';
 
+const normalizeHtml = (htmlContent) => {
+    if (!htmlContent) return '';
+    // 만약 전체 HTML 문서가 들어오면 body 내부만 추출
+    if (htmlContent.includes('<html') || htmlContent.includes('<body')) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlContent, 'text/html');
+        return doc.body.innerHTML;
+    }
+    return htmlContent;
+};
+
 function BlogDetailPage() {
     const { id } = useParams();
     const [post, setPost] = useState(null);
@@ -18,6 +29,8 @@ function BlogDetailPage() {
     // 이미지 지그재그 레이아웃 적용
     useEffect(() => {
         if (!post || !contentRef.current) return;
+        // 에디토리얼 모드면 자동 이미지 배치 로직 스킵
+        if (post.mode === 'editorial') return;
 
         const images = contentRef.current.querySelectorAll('img');
 
@@ -117,8 +130,10 @@ function BlogDetailPage() {
 
                     <div
                         ref={contentRef}
-                        className="post-content"
-                        dangerouslySetInnerHTML={{ __html: post.content }}
+                        className={`post-content ${post.mode === 'editorial' ? 'editorial' : ''}`}
+                        dangerouslySetInnerHTML={{
+                            __html: post.mode === 'editorial' ? normalizeHtml(post.content) : post.content
+                        }}
                     />
                 </div>
 
