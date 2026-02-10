@@ -48,6 +48,7 @@ function Header() {
                     <li><Link to="/#detox-tea" onClick={closeMobileNav}>DETOX TEA</Link></li>
                     <li><Link to="/#coffee" onClick={closeMobileNav}>COFFEE</Link></li>
                     <li><Link to="/#icecream" onClick={closeMobileNav}>ICECREAM</Link></li>
+                    <li><Link to="/#dessert" onClick={closeMobileNav}>DESSERT</Link></li>
                     <li><Link to="/blog" onClick={closeMobileNav}>BLOG</Link></li>
                 </ul>
             </nav>

@@ -103,7 +103,7 @@
 }
 
 .mobile-nav a {
-  font-family: 'Addington CF', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 500;
   color: #3E2512;

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { products, categories } from '../../data/products';
 import ProductCard from '../common/ProductCard';
 import './MenuSection.css';
@@ -6,6 +6,23 @@ import './MenuSection.css';
 function MenuSection() {
     const [activeCategory, setActiveCategory] = useState('signature');
     const productListRef = useRef(null);
+
+    // Handle hash navigation to auto-select category
+    useEffect(() => {
+        const handleHashChange = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (categories.some(cat => cat.id === hash)) {
+                setActiveCategory(hash);
+            }
+        };
+
+        // Check initial hash
+        handleHashChange();
+
+        // Listen for hash changes
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
 
     const handlePrevClick = () => {
         if (productListRef.current) {

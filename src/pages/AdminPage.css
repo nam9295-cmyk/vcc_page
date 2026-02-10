@@ -7,7 +7,7 @@
 }
 
 .admin-page h1 {
-    font-family: 'Addington CF', Georgia, serif;
+    font-family: var(--font-display);
     font-size: 2rem;
     color: #3E2512;
     margin-bottom: 40px;

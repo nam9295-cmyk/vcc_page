@@ -103,6 +103,26 @@ export const products = {
             description: '진짜 초콜릿을 눈처럼 뿌린 아이스크림',
             image: '/product/chocosnow.png'
         }
+    ],
+    dessert: [
+        {
+            id: 'choco-cake',
+            name: 'Choco Cake',
+            description: '진한 초콜릿 케이크',
+            image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop'
+        },
+        {
+            id: 'tiramisu',
+            name: 'Tiramisu',
+            description: '부드러운 티라미수',
+            image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop'
+        },
+        {
+            id: 'brownie',
+            name: 'Brownie',
+            description: '촉촉한 브라우니',
+            image: 'https://images.unsplash.com/photo-1564355808539-22fda35bed7e?w=400&h=300&fit=crop'
+        }
     ]
 };
 
@@ -110,5 +130,6 @@ export const categories = [
     { id: 'signature', name: 'SIGNATURE' },
     { id: 'detox-tea', name: 'DETOX TEA' },
     { id: 'coffee', name: 'COFFEE' },
-    { id: 'icecream', name: 'ICECREAM' }
+    { id: 'icecream', name: 'ICECREAM' },
+    { id: 'dessert', name: 'DESSERT' }
 ];
