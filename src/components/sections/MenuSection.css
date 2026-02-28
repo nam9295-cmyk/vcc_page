@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* ========== 메뉴 섹션 스타일 ========== */
 .menu-section {
     background: #FFFBF5;
@@ -6,12 +9,19 @@
 
 .menu-brand {
     text-align: center;
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 500;
+    font-family: 'Bebas Neue', var(--font-display, cursive), sans-serif;
+    font-size: 6rem;
+    /* 큼직하게 키움 */
+    font-weight: 400;
+    /* Bebas Neue는 기본적으로 400 웨이트를 가짐 */
     color: #3E2512;
-    margin-bottom: 30px;
-    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    letter-spacing: 6px;
+    /* 자간을 살짝 넓힘 */
+    text-transform: uppercase;
+    /* 모두 대문자로 출력 */
+    line-height: 1;
+    /* 글씨 위아래 여백을 좁혀서 매거진 같은 느낌 강조 */
 }
 
 /* 탭 네비게이션 */
@@ -28,8 +38,8 @@
 .tab-btn {
     background: none;
     border: none;
-    font-family: var(--font-display);
-    font-size: 0.9rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
     font-weight: 500;
     color: #A89585;
     cursor: pointer;
@@ -83,21 +93,23 @@
     }
 
     .menu-brand {
-        font-size: 3rem;
+        font-size: 8rem;
+        /* 데스크톱에서는 더 크고 파격적으로 */
+        letter-spacing: 12px;
+        margin-bottom: 4rem;
     }
 
     .menu-tabs {
-        gap: 15px;
+        gap: 40px;
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
     .tab-btn {
-        font-size: 3.5rem;
-        flex: 1 1 auto;
+        font-size: 2.2rem;
         text-align: center;
-        padding: 10px 0;
+        padding: 10px 20px;
         line-height: 1.2;
     }
 
@@ -152,5 +164,77 @@
 
     .slider-nav.next {
         right: 0;
+    }
+}
+
+/* ========== 레그로서리 지그재그 레이아웃 ========== */
+.category-block {
+    margin-bottom: 8rem;
+}
+
+.category-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    padding: 0 5%;
+}
+
+.category-hero.reverse {
+    flex-direction: row-reverse;
+}
+
+.category-text-area {
+    flex: 1;
+    max-width: 500px;
+}
+
+.category-title-large {
+    font-size: 3.5rem;
+    color: #4A3B32;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.category-desc-text {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.category-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.arch-image {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 200px 200px 0 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+
+    .category-hero,
+    .category-hero.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .category-title-large {
+        font-size: 2.5rem;
+    }
+
+    .arch-image {
+        height: 350px;
+        border-radius: 175px 175px 0 0;
     }
 }
