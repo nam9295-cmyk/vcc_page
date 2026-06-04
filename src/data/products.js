@@ -1,154 +1,171 @@
-// 베리굿초콜릿(very goût) 전체 메뉴 데이터
+// 베리굿초콜릿(very gout) 배민 메뉴판 기준 메뉴 데이터
+const price = (delivery, pickup = delivery) => `배달 ${delivery}원\n픽업 ${pickup}원`;
+
 export const products = {
-    signature: [
+    'hot-chocolate': [
         {
-            id: 'dark-chocolat',
-            name: '다크 쇼콜라',
-            description: '기본(57.9%), 덜 달게(70.5%), 안 달게(100%), 마일드 선택 가능 | HOT 6.8 / ICE 7.5',
+            id: 'dark-57',
+            name: '다크 57.9%',
+            description: price('6,900', '6,500'),
             image: '/product/dark_chocolat.png'
         },
         {
-            id: 'cafe-chocolat',
-            name: '카페 쇼콜라',
-            description: '기본(57.9%), 덜 달게(70.5%), 안 달게(100%), 마일드 선택 가능 | HOT 7.3 / ICE 8.0',
+            id: 'dark-70',
+            name: '다크 70.5%',
+            description: price('7,500', '7,000'),
+            image: '/product/dark_chocolat.png'
+        },
+        {
+            id: 'dark-100',
+            name: '다크 100%',
+            description: `1컵\n${price('7,900', '7,500')}`,
+            image: '/product/dark_chocolat.png'
+        },
+        {
+            id: 'mild-milk',
+            name: '마일드 밀크',
+            description: `1컵\n${price('7,500', '7,000')}`,
             image: '/product/cafe_chocolat.png'
-        },
-        {
-            id: 'matcha-chocolat',
-            name: '말차 쇼콜라',
-            description: '말차 라떼(6.8/7.5), 말차 화이트(7.3/8.0), 말차 다크(7.3/8.0)',
-            image: '/product/matcha.png'
-        },
-        {
-            id: 'cacao-milk-tea',
-            name: '카카오 밀크티',
-            description: '진한 카카오 풍미의 시그니처 밀크티 | 6.8 / 7.5',
-            image: '/product/milk_tea.png'
-        },
-        {
-            id: 'hibiscus-ade',
-            name: '히비스커스 에이드',
-            description: '상큼하고 깔끔한 히비스커스 에이드 | ICE 6.5',
-            image: '/product/hibiscus_ade.png'
         }
     ],
-    'detox-tea': [
+    'coffee-classics': [
+        { id: 'americano', name: '아메리카노', description: price('3,300', '3,000') },
+        { id: 'cafe-latte', name: '카페 라떼', description: price('3,800'), image: '/product/cafe_latte.png' },
+        { id: 'vanilla-latte', name: '바닐라 라떼', description: price('4,300'), image: '/product/vanilla_latte.png' },
+        { id: 'caramel-latte', name: '카라멜라떼', description: price('4,300'), image: '/product/caramel_latte.png' },
+        { id: 'almond-latte', name: '아몬드라떼', description: price('4,300'), image: '/product/almond_latte.png' },
+        { id: 'matcha-latte', name: '말차라떼', description: `6500\n${price('6,900')}`, image: '/product/matcha.png' },
         {
-            id: 'vcc-detox-tea',
-            name: '디톡스 블렌딩 티',
-            description: '직접 블렌딩한 카카오닙스 티 | Cup 4.5 / Box 10.0',
-            image: '/product/detox_blending.png'
-        },
-        {
-            id: 'british-black',
-            name: '브리티쉬 블랙',
-            description: '깊고 진한 영국의 블랙티',
-            image: '/product/british.png'
-        },
-        {
-            id: 'asian-gold',
-            name: '아시안 골드',
-            description: '황금빛의 프리미엄 동양 차',
-            image: '/product/asiangold.png'
-        },
-        {
-            id: 'hibiscus-fruit',
-            name: '히비스커스 프룻',
-            description: '열대 과일의 향을 품은 상큼한 티',
-            image: '/product/hibiscus.png'
-        },
-        {
-            id: 'minty-chocolat',
-            name: '민티 쇼콜라',
-            description: '상쾌한 민트와 초콜릿의 깔끔한 만남',
-            image: '/product/mintychocolat.png'
+            id: 'cafe-mocha',
+            name: '카페모카',
+            description: `리얼 다크 카페 모카, 에스프레소 2샷 추가\n${price('7,900', '7,500')}`,
+            image: '/product/cafe_chocolat.png'
         }
     ],
-    coffee: [
-        { id: 'americano', name: '아메리카노', description: '3.0', image: '/product/americano.png' },
-        { id: 'cafe-latte', name: '카페 라떼', description: '3.5', image: '/product/cafe_latte.png' },
-        { id: 'vanilla-latte', name: '바닐라 라떼', description: '4.0', image: '/product/vanilla_latte.png' },
-        { id: 'caramel-latte', name: '카라멜 라떼', description: '4.0', image: '/product/caramel_latte.png' },
-        { id: 'almond-latte', name: '아몬드 라떼', description: '4.0', image: '/product/almond_latte.png' }
+    'chocolate-box': [
+        {
+            id: 'ruby-berry-pink-chocolate',
+            name: '1+1 루비 베리 핑크 초콜릿',
+            description: `[이벤트] 1+1 루비베리 핑크 초콜릿 1박스 60g\n${price('11,000')}`
+        }
     ],
-    dessert: [
+    'chocolate-bottle': [
         {
-            id: 'dubai-jjon-ddeuk',
-            name: '두바이 쫀득쿠키 (75g)',
-            description: '카다이프와 마시멜로가 들어간 인기 메뉴 | 7.9',
-            image: '/product/dubai_cookie.png'
+            id: 'almond-dark-chocolate-bottle',
+            name: '아몬드 다크 초콜릿 유리병',
+            description: `[실속형] 아몬드 다크 초콜릿 유리병 1병 100g\n${price('12,900', '12,000')}`
+        }
+    ],
+    'cacao-detox-tea': [
+        { id: 'earl-grey', name: '얼그레이', description: price('4,900'), image: '/product/british.png' },
+        { id: 'peach-oolong', name: '피치 우롱', description: price('4,900'), image: '/product/asiangold.png' },
+        { id: 'hibiscus-blend', name: '히비스커스 블랜드', description: price('4,900'), image: '/product/hibiscus.png' }
+    ],
+    'non-coffee': [
+        { id: 'cacao-milk-tea', name: '카카오밀크티', description: price('7,500') },
+        { id: 'cacao-milk-red', name: '카카오 밀크 레드', description: price('6,900') },
+        { id: 'matcha-latte-non-coffee', name: '말차 라떼(non coffee)', description: price('6,500'), image: '/product/matcha.png' },
+        { id: 'strawberry-latte', name: '딸기 라떼', description: price('6,900') }
+    ],
+    ade: [
+        { id: 'cacao-detox-black', name: '카카오 디톡스(블랙)', description: price('6,900') },
+        { id: 'cacao-detox-red', name: '카카오 디톡스(레드)', description: price('6,900') },
+        { id: 'peach-iced-tea', name: '복숭아 아이스 티', description: price('4,300') },
+        { id: 'cherry-ade', name: '체리 에이드', description: price('5,400') },
+        { id: 'lemon-ade', name: '레몬 에이드', description: price('4,900') }
+    ],
+    tiramisu: [
+        { id: 'matcha-dubai-tiramisu', name: '말차 두바이 티라미수', description: price('9,500'), image: '/product/matcha.png' },
+        { id: 'classic-tiramisu', name: '클래식 티라미수', description: price('7,800') },
+        { id: 'choco-choco-tiramisu', name: '초코 초코 티라미수', description: price('8,300'), image: '/product/dark_chocolat.png' },
+        { id: 'strawberry-tiramisu', name: '딸기 티라미수', description: price('8,300') },
+        { id: 'ube-tiramisu', name: '우베 티라미수', description: price('9,000') }
+    ],
+    'levain-cookie': [
+        {
+            id: 'choco-chip-levain-cookie',
+            name: '초코칩 르뱅쿠키',
+            description: `[수제] 큼직하고 통통한 르뱅쿠키, 기본/초코 선택 90g\n${price('4,500')}`
+        }
+    ],
+    'cacao-granola': [
+        {
+            id: 'cacao-granola',
+            name: '카카오 그래놀라 (병선택)',
+            description: `[수제] 카카오 그래놀라 1병, 플라스틱 병 220g / 선물용 유리병 180g\n${price('12,900')}`
+        }
+    ],
+    'pain-au-chocolat': [
+        {
+            id: 'basic-pain-au-chocolat',
+            name: '기본 빵오 쇼콜라',
+            description: `[당일생산] 정통 빵오 쇼콜라 1개\n${price('4,900', '4,500')}`
         },
         {
-            id: 'dubai-chocolat',
-            name: '두바이 초콜릿 (85g)',
-            description: '수제 화이트 초코와 카다이프의 환상 조화 | 9.9',
-            image: '/product/dubai_chocolat.png'
-        },
-        {
-            id: 'dubai-set',
-            name: '두바이 세트',
-            description: '쿠키와 초콜릿을 세트로 즐기세요 | 17.0',
-            image: '/product/dubai_set.png'
-        },
-        {
-            id: 'verygood-chocoball',
-            name: '베리굿 초코볼',
-            description: '아몬드 초코볼(중 9.5/대 12.0), 네이키드 아몬드(8.5), 루비베리 초코볼(10.5)',
-            image: '/product/chocoball.png'
-        },
-        {
-            id: 'chocolat-macaron',
-            name: '쇼콜라 마카롱',
-            description: '바닐라 / 다크초코 / 라즈베리 (3.5 / 3개 세트 10.0)',
-            image: '/product/macaron.png'
-        },
-        {
-            id: 'smore-stick',
-            name: '스모어 스틱',
-            description: '달콤한 마시멜로 스모어 | 3.5',
-            image: '/product/smore.png'
-        },
-        {
-            id: 'chocolate-pouch',
-            name: '초콜릿 파우치',
-            description: '카카오닙 / 다크초콜릿 / 밀크초콜릿 | 5.0',
-            image: '/product/pouch.png'
-        },
-        {
-            id: 'tony-snowball',
-            name: '토니쿠키 스노우볼',
-            description: '삼각박스(4.5) / 쿠키 케이스(8.5)',
-            image: '/product/tony_snowball.png'
-        },
+            id: 'choco-pain-au-chocolat',
+            name: '초코 빵오 쇼콜라',
+            description: `[당일생산] 초코 빵오 쇼콜라 1개\n${price('5,500')}`
+        }
+    ],
+    canele: [
         {
             id: 'canele',
             name: '까눌레',
-            description: '바닐라(3.8), 얼그레이(4.3), 다크초코(4.5)',
-            image: '/product/canele.png'
+            description: `[당일생산] 겉바속쫀 수제 까눌레, 바닐라/초코 선택\n${price('4,500', '4,000')}`
+        }
+    ],
+    'chocolat-macaron': [
+        {
+            id: 'marshmallow-smore-stick',
+            name: '마시멜로우 스모어스틱',
+            description: `[수제] 마시멜로우 스모어스틱 1개\n${price('3,900')}`
+        }
+    ],
+    dubai: [
+        {
+            id: 'dubai-jjondeuk-cookie',
+            name: '두바이 쫀득쿠키 (두쫀쿠) 75g',
+            description: `[1000원 할인중] 두바이 쫀득 쿠키 1개 75g\n${price('7,900', '7,500')}`
         },
         {
-            id: 'levain-cookie',
-            name: '초코칩 르뱅쿠키 (90g)',
-            description: '기본 / 초코 / 말차(4.5) | 3개 세트 13.0',
-            image: '/product/levain.png'
+            id: 'choco-buttertteok',
+            name: '초코 버터떡',
+            description: `초코 버터떡 1세트 6개입\n${price('4,900')}`
         },
         {
-            id: 'gateau-chocolat',
-            name: '갸또 쇼콜라',
-            description: '초코 케이크(3.8/25.0), 바나나 브레드(4.0/28.0)',
-            image: '/product/gateau.png'
+            id: 'dubai-chocolate',
+            name: '두바이 초콜릿',
+            description: `오리지널 수제 두바이 초콜릿 1개\n${price('8,900')}`
         },
         {
-            id: 'cacao-granola',
-            name: '카카오 그래놀라',
-            description: '유리 병 150g / 플라스틱 병 220g | 12.0',
-            image: '/product/granola.png'
+            id: 'dubai-buttertteok',
+            name: '두바이 버터떡',
+            description: `떡과 소스를 분리한 찍먹 세트\n한그릇 할인 14%, 정상가 9,900원\n${price('8,500')}`
+        }
+    ],
+    cake: [
+        {
+            id: 'verygood-handmade-chocolate-cake',
+            name: '베리굿 수제 초콜릿 케이크',
+            description: `가토 쇼콜라 홀케이크 + 에펠탑 초콜릿 장식 + 고급 리본 패키징\n${price('40,000')}`
         }
     ]
 };
+
 export const categories = [
-    { id: 'signature', name: 'CACAO SIGNATURE', desc: '베리굿초콜릿만의 깊고 진한 프리미엄 시그니처 음료를 만나보세요.', repImage: '/product/rep_signature.png' },
-    { id: 'detox-tea', name: 'CACAO DETOX', desc: '몸을 가볍게 해주는 카카오닙스 베이스의 특별한 디톡스 블렌딩 티', repImage: '/product/rep_detox.png' },
-    { id: 'coffee', name: 'COFFEE', desc: '달콤한 초콜릿과 가장 잘 어울리는 스페셜티 원두 커피', repImage: '/product/rep_coffee.png' },
-    { id: 'dessert', name: 'CACAO DESSERT', desc: '두바이 쫀득쿠키부터 까눌레까지, 눈과 입이 즐거운 수제 디저트', repImage: '/product/rep_dessert.png' }
+    { id: 'hot-chocolate', name: 'Hot Chocolate', desc: '카카오 농도별로 고르는 베리굿초콜릿의 시그니처 핫초콜릿입니다.', repImage: '/product/dark_chocolat.png' },
+    { id: 'coffee-classics', name: 'Coffee Classics', desc: '아메리카노부터 라떼, 카페모카까지 기본 커피 메뉴입니다.', repImage: '/product/cafe_latte.png' },
+    { id: 'chocolate-box', name: '초코볼(종이박스)', desc: '선물하기 좋은 박스형 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'chocolate-bottle', name: '초코볼(유리병)', desc: '실속형 유리병 패키지 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'cacao-detox-tea', name: 'Cacao Detox Tea', desc: '얼그레이, 피치 우롱, 히비스커스 블렌드 티 메뉴입니다.', repImage: '/product/british.png' },
+    { id: 'non-coffee', name: 'Non Coffee', desc: '카카오밀크티, 말차, 딸기 라떼 등 논커피 음료입니다.', repImage: '/product/matcha.png' },
+    { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
+    { id: 'tiramisu', name: '티라미수', desc: '말차 두바이, 클래식, 초코, 딸기, 우베 티라미수입니다.', repImage: '/product/matcha.png' },
+    { id: 'levain-cookie', name: '르뱅쿠키', desc: '큼직하고 통통한 수제 초코칩 르뱅쿠키입니다.', repImage: '/product/rainbow.png' },
+    { id: 'cacao-granola', name: '카카오 그래놀라', desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 그래놀라입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'pain-au-chocolat', name: '빵오 쇼콜라', desc: '당일 생산하는 기본/초코 빵오 쇼콜라입니다.', repImage: '/product/caramel_latte.png' },
+    { id: 'canele', name: '까눌레', desc: '겉바속쫀 식감의 당일 생산 수제 까눌레입니다.', repImage: '/product/cafe_chocolat.png' },
+    { id: 'chocolat-macaron', name: '쇼콜라 마카롱', desc: '수제 마시멜로우 스모어스틱 메뉴입니다.', repImage: '/product/rainbow.png' },
+    { id: 'dubai', name: '두바이', desc: '두쫀쿠, 버터떡, 두바이 초콜릿 등 인기 두바이 디저트입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'cake', name: '예약주문 케이크', desc: '시그니처 수제 초콜릿 케이크 예약 주문 메뉴입니다.', repImage: '/product/dark_chocolat.png' }
 ];
