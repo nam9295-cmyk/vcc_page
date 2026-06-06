@@ -57,9 +57,10 @@ export const products = {
         }
     ],
     'cacao-detox-tea': [
-        { id: 'earl-grey', name: '얼그레이', description: price('4,900'), image: '/product/british.png' },
-        { id: 'peach-oolong', name: '피치 우롱', description: price('4,900'), image: '/product/asiangold.png' },
-        { id: 'hibiscus-blend', name: '히비스커스 블랜드', description: price('4,900'), image: '/product/hibiscus.png' }
+        { id: 'british-black', name: '브리티쉬블랙', description: '4,500원', image: '/product/british.png' },
+        { id: 'asian-gold', name: '아시안골드', description: '4,500원', image: '/product/asiangold.png' },
+        { id: 'hibiscus-fruit', name: '히비스커스프룻', description: '4,500원', image: '/product/hibiscus.png' },
+        { id: 'minty-chocolat', name: '민티쇼콜라', description: '4,500원', image: '/product/mintychocolat.png' }
     ],
     'non-coffee': [
         { id: 'cacao-milk-tea', name: '카카오밀크티', description: price('7,500') },
@@ -156,7 +157,7 @@ export const categories = [
     { id: 'coffee-classics', name: 'Coffee Classics', desc: '아메리카노부터 라떼, 카페모카까지 기본 커피 메뉴입니다.', repImage: '/product/cafe_latte.png' },
     { id: 'chocolate-box', name: '초코볼(종이박스)', desc: '선물하기 좋은 박스형 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
     { id: 'chocolate-bottle', name: '초코볼(유리병)', desc: '실속형 유리병 패키지 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
-    { id: 'cacao-detox-tea', name: 'Cacao Detox Tea', desc: '얼그레이, 피치 우롱, 히비스커스 블렌드 티 메뉴입니다.', repImage: '/product/british.png' },
+    { id: 'cacao-detox-tea', name: 'Cacao Detox Tea', desc: '브리티쉬블랙, 아시안골드, 히비스커스프룻, 민티쇼콜라 티 메뉴입니다.', repImage: '/product/british.png' },
     { id: 'non-coffee', name: 'Non Coffee', desc: '카카오밀크티, 말차, 딸기 라떼 등 논커피 음료입니다.', repImage: '/product/matcha.png' },
     { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
     { id: 'tiramisu', name: '티라미수', desc: '말차 두바이, 클래식, 초코, 딸기, 우베 티라미수입니다.', repImage: '/product/matcha.png' },

@@ -3,74 +3,73 @@ import { Link } from 'react-router-dom';
 import './ChocolateMenuPage.css';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/verygood_chocolate/';
-const ADE_FEED_URL = 'https://www.instagram.com/p/DZPyCELgfpS/';
 
-const adeItems = [
-    { name: '디톡스티 에이드', price: '5,500원', note: '가볍고 산뜻한 티 베이스 에이드' },
-    { name: '체리에이드', price: '5,000원', note: '달콤한 체리의 선명한 향' },
-    { name: '레몬에이드', price: '4,500원', note: '깔끔하게 마시는 시트러스 에이드' },
-    { name: '아이스티', price: '4,000원', note: '차갑게 즐기는 베이직 아이스티' }
+const detoxItems = [
+    { name: '브리티쉬블랙', price: '4,500원', note: '깊고 깔끔한 블랙티 베이스' },
+    { name: '아시안골드', price: '4,500원', note: '부드러운 골드 티 블렌드' },
+    { name: '히비스커스프룻', price: '4,500원', note: '상큼한 과일 향의 히비스커스' },
+    { name: '민티쇼콜라', price: '4,500원', note: '민트와 쇼콜라의 산뜻한 조합' }
 ];
 
 const feedScenes = [
     {
         label: 'FEED 01',
-        title: 'ADE MOMENT',
-        image: '/ade/ade_insta1.webp',
-        href: ADE_FEED_URL,
-        alt: '베리굿초콜릿 에이드 인스타그램 피드'
+        title: 'DETOX TEA MOMENT',
+        image: '/detox/detox_insta1.webp',
+        href: 'https://www.instagram.com/p/DS9gfVMgaj7/',
+        alt: '베리굿초콜릿 디톡스 티 인스타그램 피드'
     },
     {
         label: 'FEED 02',
-        title: 'ICED ONLY',
-        image: '/ade/ade_insta2.webp',
-        href: ADE_FEED_URL,
-        alt: '베리굿초콜릿 아이스 음료 인스타그램 피드'
+        title: 'CACAO BLENDED TEA',
+        image: '/detox/detox_insta2.webp',
+        href: 'https://www.instagram.com/p/DS_gDhOEy-Y/',
+        alt: '베리굿초콜릿 카카오 블렌드 티 인스타그램 피드'
     }
 ];
 
-function AdeMenuPage({ group }) {
+function DetoxMenuPage({ group }) {
     return (
-        <main className="chocolate-intro-page ade-intro-page">
+        <main className="chocolate-intro-page detox-intro-page">
             <Helmet>
                 <title>{group.label} | 베리굿초콜릿 메뉴</title>
                 <meta name="description" content={group.desc} />
             </Helmet>
 
-            <section className="chocolate-hero ade-hero" aria-labelledby="ade-title">
+            <section className="chocolate-hero detox-hero" aria-labelledby="detox-title">
                 <Link className="chocolate-back-link" to="/menu">전체 메뉴</Link>
-                <h1 id="ade-title" className="billboard-word chocolate-hero-word ade-hero-word">ADE</h1>
-                <div className="chocolate-featured-seal ade-featured-seal" aria-hidden="true">
-                    <span>ICED</span>
-                    <b>ONLY</b>
+                <h1 id="detox-title" className="billboard-word chocolate-hero-word detox-hero-word">DETOX</h1>
+                <div className="chocolate-featured-seal detox-featured-seal" aria-hidden="true">
+                    <span>TEA</span>
+                    <b>BLEND</b>
                 </div>
 
-                <div className="chocolate-hero-image-wrap ade-hero-image-wrap">
+                <div className="chocolate-hero-image-wrap detox-hero-image-wrap">
                     <img
-                        src="/hero/hero_ades.webp"
-                        alt="베리굿초콜릿 에이드 음료"
-                        className="chocolate-hero-image ade-hero-image"
+                        src="/hero/hero_detox_cups.webp"
+                        alt="베리굿초콜릿 디톡스 티 음료"
+                        className="chocolate-hero-image detox-hero-image"
                     />
                 </div>
 
                 <div className="chocolate-intro-copy">
-                    <p className="category-tag">ade iced only</p>
-                    <h2>Fresh iced ade</h2>
+                    <p className="category-tag">cacao detox tea</p>
+                    <h2>Tea for your mood</h2>
                     <p>
-                        차갑게 즐기는 베리굿초콜릿의 에이드 메뉴입니다.
-                        디톡스티 에이드부터 체리, 레몬, 아이스티까지 산뜻하게 준비합니다.
+                        가볍게 즐기는 베리굿초콜릿의 티 블렌드입니다.
+                        브리티쉬블랙부터 민티쇼콜라까지 취향에 맞는 향을 고를 수 있습니다.
                     </p>
                 </div>
             </section>
 
-            <section className="chocolate-info-section ade-info-section" aria-labelledby="ade-info-title">
-                <h2 id="ade-info-title">Ade (Iced only)</h2>
-                <div className="chocolate-info-table ade-info-table" role="table" aria-label="에이드 가격 정보">
+            <section className="chocolate-info-section detox-info-section" aria-labelledby="detox-info-title">
+                <h2 id="detox-info-title">Detox tea</h2>
+                <div className="chocolate-info-table ade-info-table" role="table" aria-label="디톡스 티 가격 정보">
                     <div className="chocolate-info-row chocolate-info-head ade-info-row" role="row">
                         <span role="columnheader">메뉴</span>
                         <span role="columnheader">가격</span>
                     </div>
-                    {adeItems.map((item) => (
+                    {detoxItems.map((item) => (
                         <div className="chocolate-info-row ade-info-row" role="row" key={item.name}>
                             <span role="cell">
                                 <strong>{item.name}</strong>
@@ -82,12 +81,12 @@ function AdeMenuPage({ group }) {
                 </div>
             </section>
 
-            <section className="chocolate-pairing-section" aria-labelledby="ade-feed-title">
-                <h2 id="ade-feed-title" className="billboard-word chocolate-pairing-word">
+            <section className="chocolate-pairing-section" aria-labelledby="detox-feed-title">
+                <h2 id="detox-feed-title" className="billboard-word chocolate-pairing-word">
                     RECIPES FROM OUR FEED
                 </h2>
                 <p>
-                    에이드와 디저트가 함께하는 장면은 인스타그램에서 더 자주 소개합니다.
+                    디톡스 티와 함께하는 장면은 인스타그램에서 더 자주 소개합니다.
                 </p>
                 <div className="chocolate-pairing-grid">
                     {feedScenes.map((scene) => (
@@ -118,4 +117,4 @@ function AdeMenuPage({ group }) {
     );
 }
 
-export default AdeMenuPage;
+export default DetoxMenuPage;

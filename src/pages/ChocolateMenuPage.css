@@ -258,7 +258,15 @@
     color: var(--color-butter-yellow);
 }
 
+.detox-hero-word {
+    color: var(--color-cream-teal);
+}
+
 .ade-hero-image {
+    width: min(112vw, 680px);
+}
+
+.detox-hero-image {
     width: min(112vw, 680px);
 }
 
@@ -292,6 +300,11 @@
 
     .ade-hero-image {
         width: min(92vw, 460px);
+    }
+
+    .detox-hero-image {
+        width: min(112vw, 520px);
+        transform: translateX(-10%);
     }
 
     .ade-info-row {
@@ -368,6 +381,14 @@
         width: min(92vw, 1120px);
     }
 
+    .detox-hero-image-wrap {
+        margin-top: 72px;
+    }
+
+    .detox-hero-image {
+        width: min(92vw, 1120px);
+    }
+
     .ade-info-row {
         grid-template-columns: minmax(0, 1.8fr) 0.75fr;
     }
@@ -411,6 +432,14 @@
     }
 
     .ade-hero-image {
+        width: min(80vw, 1320px);
+    }
+
+    .detox-hero-image-wrap {
+        margin-top: 42px;
+    }
+
+    .detox-hero-image {
         width: min(80vw, 1320px);
     }
 

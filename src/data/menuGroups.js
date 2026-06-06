@@ -62,8 +62,8 @@ export const menuSections = [
                 section: 'drink',
                 label: 'Detox',
                 displayWord: 'DETOX',
-                desc: '얼그레이, 피치 우롱, 히비스커스 블렌드 티 메뉴입니다.',
-                repImage: '/hero/hero_detox.webp',
+                desc: '브리티쉬블랙, 아시안골드, 히비스커스프룻, 민티쇼콜라 티 메뉴입니다.',
+                repImage: '/hero/hero_detox_cups.webp',
                 categoryIds: ['cacao-detox-tea'],
                 aliases: ['cacao-detox-tea']
             }),
