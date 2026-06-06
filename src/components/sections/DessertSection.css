@@ -37,11 +37,11 @@
 }
 
 .dessert-product img {
-    width: min(50vw, 210px);
+    width: min(46vw, 194px);
     aspect-ratio: 1154 / 1363;
     object-fit: contain;
     margin-bottom: 8px;
-    transform: scale(1.55);
+    transform: scale(1.38);
     transform-origin: center bottom;
 }
 

@@ -72,11 +72,11 @@
 }
 
 .hero-product img {
-    width: min(46vw, 190px);
+    width: min(44vw, 180px);
     max-width: 580px;
     aspect-ratio: 1154 / 1363;
     object-fit: contain;
-    transform: scale(1.58);
+    transform: scale(1.42);
     transform-origin: center bottom;
 }
 

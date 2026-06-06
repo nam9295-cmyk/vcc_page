@@ -33,10 +33,10 @@
 }
 
 .cake-content img {
-    width: min(142vw, 760px);
+    width: min(132vw, 720px);
     aspect-ratio: 1154 / 1363;
     object-fit: contain;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transform-origin: center bottom;
 }
 
