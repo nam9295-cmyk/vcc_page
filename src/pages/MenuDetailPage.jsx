@@ -5,6 +5,7 @@ import { findMenuGroup, menuGroups } from '../data/menuGroups';
 import AdeMenuPage from './AdeMenuPage';
 import ChocolateMenuPage from './ChocolateMenuPage';
 import DetoxMenuPage from './DetoxMenuPage';
+import NonCoffeeMenuPage from './NonCoffeeMenuPage';
 import './MenuPage.css';
 
 function MenuDetailPage() {
@@ -37,6 +38,10 @@ function MenuDetailPage() {
 
     if (group.id === 'detox') {
         return <DetoxMenuPage group={group} />;
+    }
+
+    if (group.id === 'noncoffee') {
+        return <NonCoffeeMenuPage group={group} />;
     }
 
     return (

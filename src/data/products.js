@@ -63,10 +63,9 @@ export const products = {
         { id: 'minty-chocolat', name: '민티쇼콜라', description: '4,500원', image: '/product/mintychocolat.png' }
     ],
     'non-coffee': [
-        { id: 'cacao-milk-tea', name: '카카오밀크티', description: price('7,500') },
-        { id: 'cacao-milk-red', name: '카카오 밀크 레드', description: price('6,900') },
-        { id: 'matcha-latte-non-coffee', name: '말차 라떼(non coffee)', description: price('6,500'), image: '/product/matcha.png' },
-        { id: 'strawberry-latte', name: '딸기 라떼', description: price('6,900') }
+        { id: 'cacao-milk-tea', name: '카카오 밀크티', description: '6,500원' },
+        { id: 'matcha-latte-non-coffee', name: '말차 라떼', description: '6,000원', image: '/product/matcha.png' },
+        { id: 'strawberry-latte', name: '딸기 라떼', description: '6,500원' }
     ],
     ade: [
         { id: 'detox-tea-ade', name: '디톡스티 에이드', description: '5,500원' },
@@ -158,7 +157,7 @@ export const categories = [
     { id: 'chocolate-box', name: '초코볼(종이박스)', desc: '선물하기 좋은 박스형 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
     { id: 'chocolate-bottle', name: '초코볼(유리병)', desc: '실속형 유리병 패키지 수제 초콜릿입니다.', repImage: '/product/chocosnow.png' },
     { id: 'cacao-detox-tea', name: 'Cacao Detox Tea', desc: '브리티쉬블랙, 아시안골드, 히비스커스프룻, 민티쇼콜라 티 메뉴입니다.', repImage: '/product/british.png' },
-    { id: 'non-coffee', name: 'Non Coffee', desc: '카카오밀크티, 말차, 딸기 라떼 등 논커피 음료입니다.', repImage: '/product/matcha.png' },
+    { id: 'non-coffee', name: 'Non Coffee', desc: '카카오 밀크티, 말차 라떼, 딸기 라떼 논커피 음료입니다.', repImage: '/hero/hero_noncoffee.webp' },
     { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
     { id: 'tiramisu', name: '티라미수', desc: '말차 두바이, 클래식, 초코, 딸기, 우베 티라미수입니다.', repImage: '/product/matcha.png' },
     { id: 'levain-cookie', name: '르뱅쿠키', desc: '큼직하고 통통한 수제 초코칩 르뱅쿠키입니다.', repImage: '/product/rainbow.png' },

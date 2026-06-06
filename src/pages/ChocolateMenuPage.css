@@ -258,6 +258,50 @@
     color: var(--color-butter-yellow);
 }
 
+.noncoffee-hero-word {
+    color: var(--color-butter-yellow);
+}
+
+.noncoffee-hero-image {
+    width: min(116vw, 720px);
+}
+
+.noncoffee-info-section {
+    margin-top: 48px;
+}
+
+@media (max-width: 620px) {
+    .noncoffee-hero-word {
+        font-size: 58px;
+        top: 52px;
+    }
+
+    .noncoffee-hero-image-wrap {
+        margin-top: 92px;
+    }
+
+    .noncoffee-hero-image {
+        width: min(112vw, 520px);
+        max-height: 360px;
+    }
+}
+
+@media (max-width: 420px) {
+    .noncoffee-hero-word {
+        font-size: 46px;
+        top: 54px;
+    }
+
+    .noncoffee-hero-image-wrap {
+        margin-top: 78px;
+    }
+
+    .noncoffee-hero-image {
+        width: min(116vw, 430px);
+        max-height: 320px;
+    }
+}
+
 .detox-hero-word {
     color: var(--color-cream-teal);
 }

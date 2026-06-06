@@ -72,10 +72,10 @@ export const menuSections = [
                 section: 'drink',
                 label: 'Noncoffee',
                 displayWord: 'NONCOFFEE',
-                desc: '논커피 음료와 커피 클래식 메뉴를 함께 확인할 수 있습니다.',
-                repImage: '/product/matcha.png',
-                categoryIds: ['non-coffee', 'coffee-classics'],
-                aliases: ['non-coffee', 'coffee-classics']
+                desc: '카카오 밀크티, 말차 라떼, 딸기 라떼 논커피 음료입니다.',
+                repImage: '/hero/hero_noncoffee.webp',
+                categoryIds: ['non-coffee'],
+                aliases: ['non-coffee']
             })
         ]
     },
