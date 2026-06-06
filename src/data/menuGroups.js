@@ -53,8 +53,8 @@ export const menuSections = [
                 section: 'drink',
                 label: 'Ade',
                 displayWord: 'ADE',
-                desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.',
-                repImage: '/hero/hero_ade.webp',
+                desc: '디톡스티 에이드, 체리에이드, 레몬에이드, 아이스티 메뉴입니다.',
+                repImage: '/hero/hero_ades.webp',
                 categoryIds: ['ade']
             }),
             makeGroup({

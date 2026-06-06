@@ -68,11 +68,10 @@ export const products = {
         { id: 'strawberry-latte', name: '딸기 라떼', description: price('6,900') }
     ],
     ade: [
-        { id: 'cacao-detox-black', name: '카카오 디톡스(블랙)', description: price('6,900') },
-        { id: 'cacao-detox-red', name: '카카오 디톡스(레드)', description: price('6,900') },
-        { id: 'peach-iced-tea', name: '복숭아 아이스 티', description: price('4,300') },
-        { id: 'cherry-ade', name: '체리 에이드', description: price('5,400') },
-        { id: 'lemon-ade', name: '레몬 에이드', description: price('4,900') }
+        { id: 'detox-tea-ade', name: '디톡스티 에이드', description: '5,500원' },
+        { id: 'cherry-ade', name: '체리에이드', description: '5,000원' },
+        { id: 'lemon-ade', name: '레몬에이드', description: '4,500원' },
+        { id: 'iced-tea', name: '아이스티', description: '4,000원' }
     ],
     tiramisu: [
         { id: 'matcha-dubai-tiramisu', name: '말차 두바이 티라미수', description: price('9,500'), image: '/product/matcha.png' },

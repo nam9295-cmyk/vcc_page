@@ -254,6 +254,18 @@
     line-height: 1.2;
 }
 
+.ade-hero-word {
+    color: var(--color-butter-yellow);
+}
+
+.ade-hero-image {
+    width: min(112vw, 680px);
+}
+
+.ade-info-row {
+    grid-template-columns: minmax(0, 1.7fr) 0.75fr;
+}
+
 @media (max-width: 420px) {
     .chocolate-hero-word {
         font-size: 58px;
@@ -276,6 +288,14 @@
 
     .chocolate-info-row strong {
         font-size: 14px;
+    }
+
+    .ade-hero-image {
+        width: min(92vw, 460px);
+    }
+
+    .ade-info-row {
+        grid-template-columns: minmax(0, 1.55fr) 0.72fr;
     }
 }
 
@@ -340,6 +360,18 @@
         font-size: 18px;
     }
 
+    .ade-hero-image-wrap {
+        margin-top: 72px;
+    }
+
+    .ade-hero-image {
+        width: min(92vw, 1120px);
+    }
+
+    .ade-info-row {
+        grid-template-columns: minmax(0, 1.8fr) 0.75fr;
+    }
+
     .chocolate-pairing-section {
         margin-top: 54px;
         padding-top: 138px;
@@ -372,6 +404,14 @@
     .chocolate-hero-image {
         width: min(82vw, 1400px);
         max-height: none;
+    }
+
+    .ade-hero-image-wrap {
+        margin-top: 42px;
+    }
+
+    .ade-hero-image {
+        width: min(80vw, 1320px);
     }
 
     .chocolate-pairing-word {

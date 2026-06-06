@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
 import ProductCard from '../components/common/ProductCard';
 import { findMenuGroup, menuGroups } from '../data/menuGroups';
+import AdeMenuPage from './AdeMenuPage';
 import ChocolateMenuPage from './ChocolateMenuPage';
 import './MenuPage.css';
 
@@ -27,6 +28,10 @@ function MenuDetailPage() {
 
     if (group.id === 'chocolate') {
         return <ChocolateMenuPage group={group} />;
+    }
+
+    if (group.id === 'ade') {
+        return <AdeMenuPage group={group} />;
     }
 
     return (
