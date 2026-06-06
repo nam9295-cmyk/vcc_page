@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
 import ProductCard from '../components/common/ProductCard';
-import CacaoSlider from '../components/sections/CacaoSlider';
 import { findMenuGroup, menuGroups } from '../data/menuGroups';
+import ChocolateMenuPage from './ChocolateMenuPage';
 import './MenuPage.css';
 
 function MenuDetailPage() {
@@ -23,6 +23,10 @@ function MenuDetailPage() {
                 <Link className="outline-button" to="/menu">전체 메뉴 보기</Link>
             </main>
         );
+    }
+
+    if (group.id === 'chocolate') {
+        return <ChocolateMenuPage group={group} />;
     }
 
     return (
@@ -56,8 +60,6 @@ function MenuDetailPage() {
                     <ProductCard key={`${product.sourceCategoryId}-${product.id}`} product={product} />
                 ))}
             </section>
-
-            {group.id === 'chocolate' && <CacaoSlider />}
         </main>
     );
 }

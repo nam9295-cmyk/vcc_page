@@ -43,10 +43,10 @@ export const menuSections = [
                 section: 'drink',
                 label: 'Chocolate',
                 displayWord: 'CHOCOLATE',
-                desc: '핫초콜릿과 초콜릿 메뉴를 한곳에 모았습니다.',
+                desc: '카카오 농도별로 고르는 베리굿초콜릿의 시그니처 핫초콜릿입니다.',
                 repImage: '/hero/hero_choco.webp',
-                categoryIds: ['hot-chocolate', 'chocolate-box', 'chocolate-bottle'],
-                aliases: ['hot-chocolate', 'chocolate-box', 'chocolate-bottle']
+                categoryIds: ['hot-chocolate'],
+                aliases: ['hot-chocolate']
             }),
             makeGroup({
                 id: 'ade',
