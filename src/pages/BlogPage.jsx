@@ -44,7 +44,7 @@ function BlogPage() {
                     {loading ? (
                         <div className="loading-spinner">Loading...</div>
                     ) : posts.length === 0 ? (
-                        <p style={{ textAlign: 'center', gridColumn: '1/-1' }}>등록된 글이 없습니다.</p>
+                        <p className="empty-state">등록된 글이 없습니다.</p>
                     ) : (
                         posts.map((post) => (
                             <BlogCard key={post.id} post={post} />

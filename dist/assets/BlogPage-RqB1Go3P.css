@@ -1,0 +1,1 @@
+.blog-page{background:var(--color-cream-white);min-height:100vh;padding:128px 20px 80px}.blog-grid{display:grid;grid-template-columns:1fr;gap:24px;max-width:var(--page-max);margin:0 auto}@media(min-width:768px){.blog-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.blog-grid{grid-template-columns:repeat(3,1fr)}}

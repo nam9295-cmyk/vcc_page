@@ -1,45 +1,43 @@
 .location-section {
-    background-color: #f9f9f9;
-    padding: 80px 20px;
+    background-color: var(--color-cream-white);
+    padding: 70px 20px;
     text-align: center;
 }
 
 .location-title {
     font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
-    color: #3E2512;
-    margin-bottom: 30px;
-    letter-spacing: 0.05em;
+    font-size: 40px;
+    line-height: 1.06;
+    font-weight: 900;
+    color: var(--color-charcoal-press);
+    margin: 0 0 28px;
+    letter-spacing: 0;
 }
 
 .location-content {
-    max-width: 800px;
+    max-width: 760px;
     margin: 0 auto;
 }
 
 .location-text {
-    font-family: 'Pretendard', sans-serif;
-    font-size: 1rem;
-    color: #555;
+    font-size: 17px;
+    color: var(--color-charcoal-press);
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 
 .location-map-link {
     display: inline-block;
     width: 100%;
     max-width: 600px;
-    transition: transform 0.3s ease;
+    border: 1px solid var(--color-border-ink);
 }
 
 .location-map-link:hover {
-    transform: scale(1.02);
+    border-color: var(--color-forest-heritage);
 }
 
 .location-map {
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: block;
 }

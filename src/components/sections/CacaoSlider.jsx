@@ -14,8 +14,8 @@ function CacaoSlider() {
 
                 <div className="slider-labels">
                     <span>100%</span>
-                    <span style={{ position: 'relative', right: '5px' }}>70.5%</span>
-                    <span style={{ position: 'relative', right: '10px' }}>57.9%</span>
+                    <span>70.5%</span>
+                    <span>57.9%</span>
                     <span>MILK</span>
                 </div>
             </div>

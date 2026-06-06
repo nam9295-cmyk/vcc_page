@@ -1,0 +1,94 @@
+.cake-reservation {
+    position: relative;
+    padding: 48px 20px 36px;
+    background: var(--color-cream-white);
+    overflow: hidden;
+}
+
+.cake-display-word {
+    position: absolute;
+    z-index: 0;
+    top: 42px;
+    left: 50%;
+    width: 100%;
+    color: var(--color-cream-teal);
+    font-size: 132px;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.cake-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    max-width: var(--page-max);
+    margin: 28px auto 0;
+    justify-items: center;
+}
+
+.cake-image-link {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.cake-content img {
+    width: min(142vw, 760px);
+    aspect-ratio: 1154 / 1363;
+    object-fit: contain;
+    transform: scale(1.2);
+    transform-origin: center bottom;
+}
+
+.cake-product-tag {
+    left: 50%;
+    top: 66%;
+    transform: translate(0, -50%);
+}
+
+@media (min-width: 768px) {
+    .cake-reservation {
+        padding: 60px 30px 58px;
+    }
+
+    .cake-display-word {
+        top: 28px;
+        font-size: 230px;
+    }
+
+    .cake-content {
+        margin-top: 64px;
+    }
+
+    .cake-content img {
+        width: min(86vw, 980px);
+        transform: scale(1.24);
+    }
+
+    .cake-product-tag {
+        left: 62%;
+        top: 64%;
+        min-width: 132px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cake-display-word {
+        top: 12px;
+        font-size: 360px;
+    }
+
+    .cake-content {
+        margin-top: 110px;
+    }
+
+    .cake-content img {
+        width: min(74vw, 1100px);
+        transform: scale(1.2);
+    }
+
+    .cake-product-tag {
+        left: 68%;
+        top: 62%;
+    }
+}

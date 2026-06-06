@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, serverTimestamp } from 'firebase/firestore';
 import { db } from '../services/firebase';
@@ -18,20 +18,6 @@ function AdminPage() {
 
     const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'vcc2023'; // 환경변수 사용, 없으면 기본값
 
-    const handleLogin = () => {
-        if (password === ADMIN_PASSWORD) {
-            setIsAuthenticated(true);
-        } else {
-            alert('비밀번호가 틀렸습니다.');
-        }
-    };
-
-    useEffect(() => {
-        if (isAuthenticated) {
-            fetchPosts();
-        }
-    }, [isAuthenticated]);
-
     const fetchPosts = async () => {
         try {
             const q = query(collection(db, "drink_stories"), orderBy("date", "desc"));
@@ -45,6 +31,15 @@ function AdminPage() {
             setPosts(fetchedPosts);
         } catch (error) {
             console.error("Error fetching posts:", error);
+        }
+    };
+
+    const handleLogin = async () => {
+        if (password === ADMIN_PASSWORD) {
+            await fetchPosts();
+            setIsAuthenticated(true);
+        } else {
+            alert('비밀번호가 틀렸습니다.');
         }
     };
 
@@ -135,12 +130,11 @@ function AdminPage() {
                             onChange={(e) => setNewPost({ ...newPost, content: e.target.value })}
                             required
                         ></textarea>
-                        <div style={{ margin: '10px 0' }}>
-                            <label style={{ marginRight: '10px' }}>게시글 모드: </label>
+                        <div className="post-mode-row">
+                            <label>게시글 모드: </label>
                             <select
                                 value={newPost.mode}
                                 onChange={(e) => setNewPost({ ...newPost, mode: e.target.value })}
-                                style={{ padding: '5px' }}
                             >
                                 <option value="regular">일반 글 (자동 이미지 배치)</option>
                                 <option value="editorial">에디토리얼 (매거진 HTML)</option>

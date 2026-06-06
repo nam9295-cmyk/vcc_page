@@ -1,28 +1,29 @@
 .custom-teaser-container {
-    padding: 60px 40px;
+    padding: 70px 20px;
     text-align: center;
-    margin: 50px auto;
+    margin: 0 auto;
     max-width: 900px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--color-cream-white);
 }
 
 .teaser-title {
-    color: #4a3f35;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    color: var(--color-charcoal-press);
+    font-size: 40px;
+    line-height: 1.06;
+    font-weight: 900;
+    margin-bottom: 16px;
 }
 
 .teaser-desc {
-    color: #8c857f;
-    font-size: 16px;
-    margin-bottom: 40px;
-    line-height: 1.6;
+    color: var(--color-charcoal-press);
+    font-size: 17px;
+    margin-bottom: 38px;
+    line-height: 1.45;
 }
 
 .slider-wrapper {
     position: relative;
-    margin: 50px auto;
+    margin: 44px auto;
     max-width: 700px;
 }
 
@@ -30,10 +31,10 @@
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    height: 14px;
-    border-radius: 10px;
-    outline: none;
-    background: linear-gradient(to left, #e8ccb5, #4a3f35);
+    height: 12px;
+    border-radius: 0;
+    outline: 0;
+    background: var(--color-charcoal-press);
     cursor: pointer;
     direction: rtl;
 }
@@ -41,90 +42,62 @@
 .chocolate-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: #edc5c4;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: var(--color-cream-white);
+    border: 2px solid var(--color-forest-heritage);
     cursor: grab;
-    transition: transform 0.1s;
 }
 
-.chocolate-range::-webkit-slider-thumb:active {
-    transform: scale(1.1);
-    cursor: grabbing;
+.chocolate-range::-moz-range-thumb {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--color-cream-white);
+    border: 2px solid var(--color-forest-heritage);
+    cursor: grab;
 }
 
 .slider-labels {
     display: flex;
     justify-content: space-between;
-    margin-top: 12px;
-    color: #6b6b6b;
+    margin-top: 16px;
+    color: var(--color-forest-heritage);
     font-size: 14px;
-    font-weight: 600;
-    padding: 0 5px;
+    font-weight: 500;
 }
 
 .go-custom-btn {
-    display: inline-block;
-    background-color: #4a3f35;
-    color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-forest-heritage);
+    border-radius: 20px;
+    background: var(--color-cream-white);
+    color: var(--color-forest-heritage);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(74, 63, 53, 0.2);
+    font-weight: 500;
+    font-size: 17px;
 }
 
 .go-custom-btn:hover {
-    background-color: #362e26;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(74, 63, 53, 0.3);
+    border-color: var(--color-billboard-blue);
+    color: var(--color-billboard-blue);
 }
 
-/* 모바일에서만 박스 스타일 적용 */
 @media (max-width: 768px) {
     .custom-teaser-container {
-        background-color: #faf7f2;
-        padding: 40px 20px;
-        border-radius: 15px;
-        margin: 30px 15px;
-        max-width: none;
-        box-shadow: 0 4px 15px rgba(74, 63, 53, 0.08);
+        padding: 56px 20px;
     }
 
     .teaser-title {
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .teaser-desc {
-        font-size: 14px;
-        margin-bottom: 30px;
-    }
-
-    .slider-wrapper {
-        margin: 40px 20px;
-    }
-
-    .chocolate-range {
-        height: 12px;
-    }
-
-    .chocolate-range::-webkit-slider-thumb {
-        width: 28px;
-        height: 28px;
-    }
-
-    .slider-labels {
-        font-size: 12px;
-    }
-
-    .go-custom-btn {
-        padding: 15px 35px;
-        font-size: 14px;
+        font-size: 15px;
     }
 }

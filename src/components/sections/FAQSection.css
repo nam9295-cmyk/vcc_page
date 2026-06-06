@@ -1,44 +1,42 @@
 .faq-section {
     max-width: 900px;
-    margin: 60px auto;
-    padding: 40px 20px;
+    margin: 0 auto;
+    padding: 72px 20px 86px;
+    background: var(--color-cream-white);
 }
 
 .faq-section .section-title {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #3E2512;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 }
 
 .faq-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 .faq-item {
-    background: #faf7f2;
-    border-radius: 12px;
+    background: var(--color-cream-white);
+    border-top: 1px solid var(--color-border-ink);
+    border-radius: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
-.faq-item[open] {
-    box-shadow: 0 4px 15px rgba(74, 63, 53, 0.1);
+.faq-item:last-child {
+    border-bottom: 1px solid var(--color-border-ink);
 }
 
 .faq-item summary {
-    padding: 20px 25px;
+    padding: 20px 0;
     cursor: pointer;
-    font-weight: 600;
-    color: #4a3f35;
-    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-charcoal-press);
+    font-size: 17px;
+    line-height: 1.45;
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.2s;
+    gap: 20px;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -47,40 +45,24 @@
 
 .faq-item summary::after {
     content: '+';
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #8c857f;
-    transition: transform 0.3s;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-forest-heritage);
 }
 
 .faq-item[open] summary::after {
-    content: '−';
-}
-
-.faq-item summary:hover {
-    background: #f5f0e8;
+    content: '-';
 }
 
 .faq-answer {
-    padding: 0 25px 20px;
-    color: #555;
+    padding: 0 0 20px;
+    color: var(--color-charcoal-press);
     line-height: 1.7;
-    font-size: 0.95rem;
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
     .faq-section {
-        margin: 40px 15px;
-        padding: 30px 15px;
-    }
-
-    .faq-item summary {
-        padding: 15px 18px;
-        font-size: 0.95rem;
-    }
-
-    .faq-answer {
-        padding: 0 18px 15px;
-        font-size: 0.9rem;
+        padding: 60px 20px 70px;
     }
 }

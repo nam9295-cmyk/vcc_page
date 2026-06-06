@@ -1,14 +1,14 @@
 .blog-page {
-    background: #FFFBF5;
+    background: var(--color-cream-white);
     min-height: 100vh;
-    padding: 100px 20px 80px;
+    padding: 128px 20px 80px;
 }
 
 .blog-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    max-width: 1200px;
+    gap: 24px;
+    max-width: var(--page-max);
     margin: 0 auto;
 }
 

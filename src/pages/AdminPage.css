@@ -1,70 +1,95 @@
 .admin-page {
-    background: #FFFBF5;
+    background: var(--color-cream-white);
     min-height: 100vh;
-    padding: 100px 20px 80px;
+    padding: 128px 20px 80px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .admin-page h1 {
     font-family: var(--font-display);
-    font-size: 2rem;
-    color: #3E2512;
+    font-size: 40px;
+    line-height: 1.06;
+    font-weight: 900;
+    color: var(--color-charcoal-press);
     margin-bottom: 40px;
     text-align: center;
 }
 
-/* Login Box */
 .login-box {
     max-width: 400px;
-    margin: 100px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(62, 37, 18, 0.1);
+    margin: 90px auto;
+    padding: 30px;
+    background: var(--color-cream-white);
+    border: 1px solid var(--color-border-ink);
+    border-radius: 0;
     text-align: center;
 }
 
 .login-box h1 {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+}
+
+.login-box input,
+.add-post-section input,
+.add-post-section textarea,
+.post-mode-row select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border-ink);
+    border-radius: 0;
+    background: var(--color-cream-white);
+    color: var(--color-charcoal-press);
+    font-family: var(--font-body);
+    font-size: 16px;
 }
 
 .login-box input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
     margin-bottom: 15px;
 }
 
-.login-box button {
+.login-box input:focus,
+.add-post-section input:focus,
+.add-post-section textarea:focus,
+.post-mode-row select:focus {
+    outline: 2px solid var(--color-cream-teal);
+    outline-offset: 2px;
+}
+
+.login-box button,
+.add-post-section button {
     width: 100%;
-    padding: 15px;
-    background: #3E2512;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 10px 20px;
+    min-height: 44px;
+    background: var(--color-cream-white);
+    color: var(--color-forest-heritage);
+    border: 2px solid var(--color-forest-heritage);
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.login-box button:hover {
-    background: #5D3A1A;
+.login-box button:hover,
+.add-post-section button:hover {
+    border-color: var(--color-billboard-blue);
+    color: var(--color-billboard-blue);
 }
 
-/* Add Post Section */
 .add-post-section {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(62, 37, 18, 0.08);
+    background: var(--color-cream-white);
+    padding: 26px;
+    border: 1px solid var(--color-border-ink);
+    border-radius: 0;
     margin-bottom: 40px;
 }
 
-.add-post-section h2 {
-    color: #3E2512;
+.add-post-section h2,
+.posts-list-section h2 {
+    color: var(--color-charcoal-press);
     margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.2;
 }
 
 .add-post-section form {
@@ -73,49 +98,30 @@
     gap: 15px;
 }
 
-.add-post-section input,
-.add-post-section textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
+.post-mode-row {
+    display: grid;
+    gap: 8px;
 }
 
-.add-post-section button {
-    padding: 15px;
-    background: #3E2512;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.add-post-section button:hover {
-    background: #5D3A1A;
-}
-
-/* Posts List */
-.posts-list-section h2 {
-    color: #3E2512;
-    margin-bottom: 20px;
+.post-mode-row label {
+    color: var(--color-forest-heritage);
+    font-weight: 500;
 }
 
 .posts-table {
-    background: #fff;
-    border-radius: 12px;
+    background: var(--color-cream-white);
+    border: 1px solid var(--color-border-ink);
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(62, 37, 18, 0.08);
 }
 
 .post-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 18px;
     padding: 15px 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-border-ink);
 }
 
 .post-item:last-child {
@@ -123,20 +129,30 @@
 }
 
 .post-title {
-    color: #333;
+    color: var(--color-charcoal-press);
     font-weight: 500;
 }
 
 .delete-btn {
+    flex: 0 0 auto;
     padding: 8px 16px;
-    background: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
+    background: var(--color-cream-white);
+    color: #b42318;
+    border: 1px solid #b42318;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .delete-btn:hover {
-    background: #c82333;
+    color: var(--color-charcoal-press);
+    border-color: var(--color-charcoal-press);
+}
+
+@media (max-width: 640px) {
+    .post-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }

@@ -38,7 +38,7 @@ function LatestBlogSection() {
                 {loading ? (
                     <div className="loading-spinner">Loading...</div>
                 ) : posts.length === 0 ? (
-                    <p style={{ textAlign: 'center', gridColumn: '1/-1' }}>등록된 글이 없습니다.</p>
+                    <p className="empty-state">등록된 글이 없습니다.</p>
                 ) : (
                     posts.map((post) => (
                         <BlogCard key={post.id} post={post} />
@@ -46,7 +46,7 @@ function LatestBlogSection() {
                 )}
             </div>
             <div className="blog-more-btn-wrapper">
-                <Link to="/blog" className="blog-more-btn">더보기</Link>
+                <Link to="/blog" className="blog-more-btn">스토리 더보기</Link>
             </div>
         </section>
     );

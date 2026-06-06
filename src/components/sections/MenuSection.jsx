@@ -3,9 +3,30 @@ import { products, categories } from '../../data/products';
 import ProductCard from '../common/ProductCard';
 import './MenuSection.css';
 
+const categoryWords = {
+    'hot-chocolate': 'CHOCOLATE',
+    'coffee-classics': 'COFFEE',
+    'chocolate-box': 'CACAO',
+    'chocolate-bottle': 'CACAO',
+    'cacao-detox-tea': 'TEA',
+    'non-coffee': 'CACAO',
+    ade: 'TEA',
+    tiramisu: 'DESSERT',
+    'levain-cookie': 'DESSERT',
+    'cacao-granola': 'CACAO',
+    'pain-au-chocolat': 'DESSERT',
+    canele: 'DESSERT',
+    'chocolat-macaron': 'DESSERT',
+    dubai: 'DESSERT',
+    cake: 'DESSERT'
+};
+
 function MenuSection() {
     const [activeCategory, setActiveCategory] = useState(categories[0]?.id || '');
     const filteredProducts = products[activeCategory] || [];
+    const activeCategoryData = categories.find(cat => cat.id === activeCategory) || categories[0];
+    const billboardWord = categoryWords[activeCategory] || 'CHOCOLATE';
+    const isDessertTone = billboardWord === 'DESSERT' || billboardWord === 'CACAO';
     const mainProductListRef = useRef(null);
 
     // Handle hash navigation to auto-select category in the top slider
@@ -36,10 +57,13 @@ function MenuSection() {
 
     return (
         <section className="menu-section" id="menu">
-            <h2 className="menu-brand">menu</h2>
+            <div className="menu-heading">
+                <h2 className={`billboard-word ${isDessertTone ? 'is-yellow' : ''}`}>{billboardWord}</h2>
+                <p className="category-tag">{activeCategoryData?.name}</p>
+                <p>{activeCategoryData?.desc}</p>
+            </div>
 
-            {/* 1. 상단: 기존 탭 네비게이션 방식의 메뉴 슬라이드 */}
-            <nav className="menu-tabs">
+            <nav className="menu-tabs" aria-label="메뉴 카테고리">
                 {categories.map(cat => (
                     <button
                         key={cat.id}
@@ -58,8 +82,8 @@ function MenuSection() {
                         <ProductCard key={`top-${product.id}`} product={product} />
                     ))}
                 </div>
-                <button className="slider-nav prev" onClick={handleMainPrevClick}>❮</button>
-                <button className="slider-nav next" onClick={handleMainNextClick}>❯</button>
+                <button className="slider-nav prev" onClick={handleMainPrevClick} aria-label="이전 메뉴">‹</button>
+                <button className="slider-nav next" onClick={handleMainNextClick} aria-label="다음 메뉴">›</button>
             </div>
         </section>
     );

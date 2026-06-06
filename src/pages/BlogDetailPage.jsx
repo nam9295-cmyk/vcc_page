@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { doc, getDoc } from 'firebase/firestore';
@@ -22,9 +22,24 @@ function BlogDetailPage() {
     const [loading, setLoading] = useState(true);
     const contentRef = useRef(null);
 
+    const fetchPost = useCallback(async () => {
+        try {
+            const docRef = doc(db, "drink_stories", id);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                setPost({ id: docSnap.id, ...docSnap.data() });
+            }
+        } catch (error) {
+            console.error("Error fetching post:", error);
+        } finally {
+            setLoading(false);
+        }
+    }, [id]);
+
     useEffect(() => {
         fetchPost();
-    }, [id]);
+    }, [fetchPost]);
 
     // 이미지 지그재그 레이아웃 적용
     useEffect(() => {
@@ -60,21 +75,6 @@ function BlogDetailPage() {
             }
         });
     }, [post]);
-
-    const fetchPost = async () => {
-        try {
-            const docRef = doc(db, "drink_stories", id);
-            const docSnap = await getDoc(docRef);
-
-            if (docSnap.exists()) {
-                setPost({ id: docSnap.id, ...docSnap.data() });
-            }
-        } catch (error) {
-            console.error("Error fetching post:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
 
     const formatDate = (timestamp) => {
         if (!timestamp) return '';

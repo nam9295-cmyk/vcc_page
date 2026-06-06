@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '../components/sections/HeroSection';
-import MenuSection from '../components/sections/MenuSection';
-import CacaoSlider from '../components/sections/CacaoSlider';
+import DessertSection from '../components/sections/DessertSection';
+import CakeReservationSection from '../components/sections/CakeReservationSection';
 import LatestBlogSection from '../components/sections/LatestBlogSection';
 import LocationSection from '../components/sections/LocationSection';
 import ContactSection from '../components/sections/ContactSection';
@@ -26,8 +26,8 @@ function HomePage() {
             </Helmet>
 
             <HeroSection />
-            <MenuSection />
-            <CacaoSlider />
+            <DessertSection />
+            <CakeReservationSection />
             <LatestBlogSection />
 
             <div className="info-section-wrapper">

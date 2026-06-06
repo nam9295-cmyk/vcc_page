@@ -1,103 +1,221 @@
-/* 1. 스크롤 영역 확보 */
-.scroll-container {
-    height: 250vh;
+.hero-billboard {
     position: relative;
-}
-
-/* 데스크탑: 스크롤 애니메이션 대신 영상 재생 */
-@media (min-width: 1024px) {
-    .scroll-container {
-        height: 100vh;
-    }
-}
-
-/* 2. 비디오를 화면에 고정 (Sticky) */
-.sticky-wrapper {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 100vh;
+    padding: 94px 20px 44px;
+    background: var(--color-cream-white);
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* 중앙 로고 스타일 */
-.hero-logo {
+.hero-display-word {
     position: absolute;
-    top: 50%;
+    z-index: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    width: 60%;
-    max-width: 600px;
+    top: 78px;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 104px;
+}
+
+.featured-seal {
+    position: absolute;
+    z-index: 4;
+    top: 112px;
+    left: 20px;
+    width: 96px;
+    height: 96px;
+    border: 2px solid var(--color-forest-heritage);
+    border-radius: 50%;
+    background: var(--color-cream-white);
+    color: var(--color-forest-heritage);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.featured-seal span,
+.featured-seal b {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.hero-products {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: min(calc(100% + 28px), var(--page-max));
+    margin: 214px -14px 0;
+    align-items: end;
+}
+
+.hero-product {
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    align-items: end;
+    text-align: center;
+    min-width: 0;
+}
+
+.showcase-image-link {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-product img {
+    width: min(46vw, 190px);
+    max-width: 580px;
+    aspect-ratio: 1154 / 1363;
+    object-fit: contain;
+    transform: scale(1.58);
+    transform-origin: center bottom;
+}
+
+.hero-product:nth-child(3) img {
+    margin-top: 10px;
+    margin-bottom: -2px;
+}
+
+.showcase-tag {
+    position: absolute;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 94px;
+    min-height: 52px;
+    padding: 8px 12px;
+    background: var(--color-cream-teal);
+    color: var(--color-forest-heritage);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
     pointer-events: none;
 }
 
-.hero-logo img {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4));
+.showcase-tag::before,
+.showcase-tag::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 100%;
+    background: var(--color-cream-teal);
 }
 
-@media (max-width: 1024px) {
-    .hero-logo {
-        width: 80%;
+.showcase-tag::before {
+    left: -10px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%, 26% 50%, 0 14%);
+}
+
+.showcase-tag::after {
+    right: -10px;
+    clip-path: polygon(0 0, 100% 0, 74% 14%, 100% 50%, 74% 86%, 100% 100%, 0 100%);
+}
+
+.hero-product-tag {
+    left: 6%;
+    top: 56%;
+    transform: translate(-18%, -50%);
+}
+
+.hero-product p {
+    display: none;
+    margin: 6px 0 0;
+    color: var(--color-charcoal-press);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-transform: uppercase;
+    min-height: 30px;
+}
+
+@media (min-width: 768px) {
+    .hero-billboard {
+        padding: 104px 30px 62px;
+    }
+
+    .featured-seal {
+        top: 134px;
+        left: 30px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-display-word {
+        top: 92px;
+        font-size: 170px;
+    }
+
+    .hero-products {
+        align-items: end;
+        gap: 26px;
+        width: min(100%, var(--page-max));
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 292px;
+    }
+
+    .hero-product:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .hero-product img {
+        width: min(26vw, 390px);
+        transform: scale(2);
+    }
+
+    .hero-product:nth-child(3) img {
+        margin-top: 14px;
+        margin-bottom: -4px;
+    }
+
+    .showcase-tag {
+        min-width: 132px;
+        min-height: 70px;
+        padding: 10px 18px;
+        font-size: 18px;
     }
 }
 
-/* ========== 초콜릿 배지 스타일 ========== */
-.scroll-badges {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 5;
+@media (min-width: 1200px) {
+    .hero-billboard {
+        padding-top: 96px;
+    }
+
+    .hero-display-word {
+        top: 42px;
+        font-size: 290px;
+    }
+
+    .hero-products {
+        margin-top: 372px;
+    }
+
+    .hero-product img {
+        width: min(24vw, 390px);
+        transform: scale(2);
+    }
 }
 
-.choco-badge {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(100vh);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    background: linear-gradient(145deg, #5D3A1A, #3E2512);
-    padding: 16px 28px;
-    border-radius: 20px;
-    box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.5),
-        inset 0 2px 4px rgba(255, 255, 255, 0.1),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.3);
-    border: 2px solid #C9A050;
-}
-
-.choco-badge span {
-    font-family: 'Georgia', serif;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #F5DEB3;
-    text-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.5),
-        0 0 10px rgba(201, 160, 80, 0.3);
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-/* 데스크탑에서는 배지 숨김 */
-@media (min-width: 1024px) {
-    .scroll-badges {
-        display: none;
+@media (max-width: 767px) {
+    .showcase-tag {
+        min-width: 82px;
+        min-height: 44px;
+        padding: 7px 8px;
+        font-size: 11px;
     }
 }
