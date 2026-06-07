@@ -6,7 +6,9 @@ import AdeMenuPage from './AdeMenuPage';
 import BreadMenuPage from './BreadMenuPage';
 import ChocolateMenuPage from './ChocolateMenuPage';
 import DetoxMenuPage from './DetoxMenuPage';
+import DubaiMenuPage from './DubaiMenuPage';
 import NonCoffeeMenuPage from './NonCoffeeMenuPage';
+import TiramisuMenuPage from './TiramisuMenuPage';
 import './MenuPage.css';
 
 function MenuDetailPage() {
@@ -47,6 +49,14 @@ function MenuDetailPage() {
 
     if (group.id === 'bread') {
         return <BreadMenuPage group={group} />;
+    }
+
+    if (group.id === 'tiramisu') {
+        return <TiramisuMenuPage group={group} />;
+    }
+
+    if (group.id === 'dubai') {
+        return <DubaiMenuPage group={group} />;
     }
 
     return (

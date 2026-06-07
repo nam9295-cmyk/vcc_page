@@ -84,6 +84,15 @@ export const menuSections = [
         label: '디저트',
         groups: [
             makeGroup({
+                id: 'tiramisu',
+                section: 'dessert',
+                label: 'Tiramisu',
+                displayWord: 'TIRAMISU',
+                desc: '클래식, 초코, 말차, 딸기, 우베 티라미수입니다.',
+                repImage: '/hero/hero_tiramisu5ea.webp',
+                categoryIds: ['tiramisu']
+            }),
+            makeGroup({
                 id: 'bread',
                 section: 'dessert',
                 label: 'Bread',
@@ -106,8 +115,8 @@ export const menuSections = [
                 section: 'dessert',
                 label: 'Dubai',
                 displayWord: 'DUBAI',
-                desc: '두바이 쫀득쿠키, 두바이 초콜릿, 버터떡 메뉴입니다.',
-                repImage: '/product/chocosnow.png',
+                desc: '두바이 쫀득 쿠키, 두바이 초콜릿, 두바이 버터떡, 초코 버터떡 메뉴입니다.',
+                repImage: '/hero/hero_dubai3ea.webp',
                 categoryIds: ['dubai']
             })
         ]

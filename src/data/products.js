@@ -74,11 +74,11 @@ export const products = {
         { id: 'iced-tea', name: '아이스티', description: '4,000원' }
     ],
     tiramisu: [
-        { id: 'matcha-dubai-tiramisu', name: '말차 두바이 티라미수', description: price('9,500'), image: '/product/matcha.png' },
-        { id: 'classic-tiramisu', name: '클래식 티라미수', description: price('7,800') },
-        { id: 'choco-choco-tiramisu', name: '초코 초코 티라미수', description: price('8,300'), image: '/product/dark_chocolat.png' },
-        { id: 'strawberry-tiramisu', name: '딸기 티라미수', description: price('8,300') },
-        { id: 'ube-tiramisu', name: '우베 티라미수', description: price('9,000') }
+        { id: 'classic-tiramisu', name: '클래식 티라미수', description: '7,500원' },
+        { id: 'choco-choco-tiramisu', name: '초코 초코 티라미수', description: '8,000원', image: '/product/dark_chocolat.png' },
+        { id: 'matcha-dubai-tiramisu', name: '말차 두바이 티라미수', description: '9,000원', image: '/product/matcha.png' },
+        { id: 'strawberry-tiramisu', name: '딸기 티라미수', description: '8,000원' },
+        { id: 'ube-tiramisu', name: '우베 티라미수', description: '8,500원' }
     ],
     'levain-cookie': [
         {
@@ -135,23 +135,23 @@ export const products = {
     dubai: [
         {
             id: 'dubai-jjondeuk-cookie',
-            name: '두바이 쫀득쿠키 (두쫀쿠) 75g',
-            description: `[1000원 할인중] 두바이 쫀득 쿠키 1개 75g\n${price('7,900', '7,500')}`
-        },
-        {
-            id: 'choco-buttertteok',
-            name: '초코 버터떡',
-            description: `초코 버터떡 1세트 6개입\n${price('4,900')}`
+            name: '두바이 쫀득 쿠키',
+            description: '7,500원'
         },
         {
             id: 'dubai-chocolate',
             name: '두바이 초콜릿',
-            description: `오리지널 수제 두바이 초콜릿 1개\n${price('8,900')}`
+            description: '8,500원'
         },
         {
             id: 'dubai-buttertteok',
             name: '두바이 버터떡',
-            description: `떡과 소스를 분리한 찍먹 세트\n한그릇 할인 14%, 정상가 9,900원\n${price('8,500')}`
+            description: '9,500원'
+        },
+        {
+            id: 'choco-buttertteok',
+            name: '초코 버터떡',
+            description: '4,500원'
         }
     ],
     cake: [
@@ -171,13 +171,13 @@ export const categories = [
     { id: 'cacao-detox-tea', name: 'Cacao Detox Tea', desc: '브리티쉬블랙, 아시안골드, 히비스커스프룻, 민티쇼콜라 티 메뉴입니다.', repImage: '/product/british.png' },
     { id: 'non-coffee', name: 'Non Coffee', desc: '카카오 밀크티, 말차 라떼, 딸기 라떼 논커피 음료입니다.', repImage: '/hero/hero_noncoffee.webp' },
     { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
-    { id: 'tiramisu', name: '티라미수', desc: '말차 두바이, 클래식, 초코, 딸기, 우베 티라미수입니다.', repImage: '/product/matcha.png' },
+    { id: 'tiramisu', name: '티라미수', desc: '클래식, 초코, 말차, 딸기, 우베 티라미수입니다.', repImage: '/hero/hero_tiramisu5ea.webp' },
     { id: 'levain-cookie', name: '르뱅쿠키', desc: '기본과 초코로 고르는 르뱅쿠키입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'cacao-granola', name: '카카오 그래놀라', desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 그래놀라입니다.', repImage: '/product/chocosnow.png' },
     { id: 'pain-au-chocolat', name: '빵오 쇼콜라', desc: '기본과 초코로 고르는 빵오 쇼콜라입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'gateau-au-chocolat', name: 'Gâteau au Chocolat', desc: '진한 초콜릿 풍미의 가토 오 쇼콜라 조각입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'canele', name: '까눌레', desc: '겉바속쫀 식감의 당일 생산 수제 까눌레입니다.', repImage: '/product/cafe_chocolat.png' },
     { id: 'chocolat-macaron', name: '쇼콜라 마카롱', desc: '수제 마시멜로우 스모어스틱 메뉴입니다.', repImage: '/product/rainbow.png' },
-    { id: 'dubai', name: '두바이', desc: '두쫀쿠, 버터떡, 두바이 초콜릿 등 인기 두바이 디저트입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'dubai', name: '두바이', desc: '두바이 쫀득 쿠키, 두바이 초콜릿, 두바이 버터떡, 초코 버터떡 메뉴입니다.', repImage: '/hero/hero_dubai3ea.webp' },
     { id: 'cake', name: '예약주문 케이크', desc: '시그니처 수제 초콜릿 케이크 예약 주문 메뉴입니다.', repImage: '/product/dark_chocolat.png' }
 ];

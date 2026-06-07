@@ -6,11 +6,11 @@ const dessertFeatures = [
         label: 'TIRAMISU',
         caption: 'MATCHA · CLASSIC · CHOCO',
         image: '/hero/hero_choco_tiramisu.webp',
-        href: '/menu/bread'
+        href: '/menu/tiramisu'
     },
     {
         label: 'BREAD',
-        caption: 'TIRAMISU · COOKIE · CANELE',
+        caption: 'PAIN · COOKIE · GATEAU',
         image: '/hero/hero_pain_choco.webp',
         href: '/menu/bread'
     },
