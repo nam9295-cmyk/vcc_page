@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import ProductCard from '../components/common/ProductCard';
 import { findMenuGroup, menuGroups } from '../data/menuGroups';
 import AdeMenuPage from './AdeMenuPage';
+import BreadMenuPage from './BreadMenuPage';
 import ChocolateMenuPage from './ChocolateMenuPage';
 import DetoxMenuPage from './DetoxMenuPage';
 import NonCoffeeMenuPage from './NonCoffeeMenuPage';
@@ -42,6 +43,10 @@ function MenuDetailPage() {
 
     if (group.id === 'noncoffee') {
         return <NonCoffeeMenuPage group={group} />;
+    }
+
+    if (group.id === 'bread') {
+        return <BreadMenuPage group={group} />;
     }
 
     return (

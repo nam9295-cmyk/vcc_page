@@ -82,9 +82,14 @@ export const products = {
     ],
     'levain-cookie': [
         {
-            id: 'choco-chip-levain-cookie',
-            name: '초코칩 르뱅쿠키',
-            description: `[수제] 큼직하고 통통한 르뱅쿠키, 기본/초코 선택 90g\n${price('4,500')}`
+            id: 'basic-levain-cookie',
+            name: '기본 르뱅쿠키',
+            description: '4,000원'
+        },
+        {
+            id: 'choco-levain-cookie',
+            name: '초코 르뱅쿠키',
+            description: '4,500원'
         }
     ],
     'cacao-granola': [
@@ -98,12 +103,19 @@ export const products = {
         {
             id: 'basic-pain-au-chocolat',
             name: '기본 빵오 쇼콜라',
-            description: `[당일생산] 정통 빵오 쇼콜라 1개\n${price('4,900', '4,500')}`
+            description: '4,500원'
         },
         {
             id: 'choco-pain-au-chocolat',
             name: '초코 빵오 쇼콜라',
-            description: `[당일생산] 초코 빵오 쇼콜라 1개\n${price('5,500')}`
+            description: '5,000원'
+        }
+    ],
+    'gateau-au-chocolat': [
+        {
+            id: 'gateau-au-chocolat-piece',
+            name: '가토 오 쇼콜라 조각',
+            description: '4,000원'
         }
     ],
     canele: [
@@ -160,9 +172,10 @@ export const categories = [
     { id: 'non-coffee', name: 'Non Coffee', desc: '카카오 밀크티, 말차 라떼, 딸기 라떼 논커피 음료입니다.', repImage: '/hero/hero_noncoffee.webp' },
     { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
     { id: 'tiramisu', name: '티라미수', desc: '말차 두바이, 클래식, 초코, 딸기, 우베 티라미수입니다.', repImage: '/product/matcha.png' },
-    { id: 'levain-cookie', name: '르뱅쿠키', desc: '큼직하고 통통한 수제 초코칩 르뱅쿠키입니다.', repImage: '/product/rainbow.png' },
+    { id: 'levain-cookie', name: '르뱅쿠키', desc: '기본과 초코로 고르는 르뱅쿠키입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'cacao-granola', name: '카카오 그래놀라', desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 그래놀라입니다.', repImage: '/product/chocosnow.png' },
-    { id: 'pain-au-chocolat', name: '빵오 쇼콜라', desc: '당일 생산하는 기본/초코 빵오 쇼콜라입니다.', repImage: '/product/caramel_latte.png' },
+    { id: 'pain-au-chocolat', name: '빵오 쇼콜라', desc: '기본과 초코로 고르는 빵오 쇼콜라입니다.', repImage: '/hero/hero_dessert.webp' },
+    { id: 'gateau-au-chocolat', name: 'Gâteau au Chocolat', desc: '진한 초콜릿 풍미의 가토 오 쇼콜라 조각입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'canele', name: '까눌레', desc: '겉바속쫀 식감의 당일 생산 수제 까눌레입니다.', repImage: '/product/cafe_chocolat.png' },
     { id: 'chocolat-macaron', name: '쇼콜라 마카롱', desc: '수제 마시멜로우 스모어스틱 메뉴입니다.', repImage: '/product/rainbow.png' },
     { id: 'dubai', name: '두바이', desc: '두쫀쿠, 버터떡, 두바이 초콜릿 등 인기 두바이 디저트입니다.', repImage: '/product/chocosnow.png' },

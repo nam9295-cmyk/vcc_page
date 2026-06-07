@@ -88,23 +88,17 @@ export const menuSections = [
                 section: 'dessert',
                 label: 'Bread',
                 displayWord: 'BREAD',
-                desc: '티라미수, 쿠키, 까눌레, 빵오 쇼콜라 등 디저트 메뉴입니다.',
-                repImage: '/product/cafe_chocolat.png',
+                desc: '빵오 쇼콜라, 르뱅 쿠키, 가토 오 쇼콜라 디저트 메뉴입니다.',
+                repImage: '/hero/hero_dessert.webp',
                 categoryIds: [
-                    'tiramisu',
                     'levain-cookie',
-                    'cacao-granola',
                     'pain-au-chocolat',
-                    'canele',
-                    'chocolat-macaron'
+                    'gateau-au-chocolat'
                 ],
                 aliases: [
-                    'tiramisu',
                     'levain-cookie',
-                    'cacao-granola',
                     'pain-au-chocolat',
-                    'canele',
-                    'chocolat-macaron'
+                    'gateau-au-chocolat'
                 ]
             }),
             makeGroup({

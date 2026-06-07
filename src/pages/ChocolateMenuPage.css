@@ -270,6 +270,22 @@
     margin-top: 48px;
 }
 
+.bread-hero-word {
+    color: var(--color-butter-yellow);
+}
+
+.bread-hero-image {
+    width: min(118vw, 760px);
+}
+
+.bread-info-section {
+    margin-top: 52px;
+}
+
+.bread-info-row {
+    grid-template-columns: minmax(0, 1.55fr) 0.55fr 0.65fr;
+}
+
 @media (max-width: 620px) {
     .noncoffee-hero-word {
         font-size: 58px;
@@ -283,6 +299,24 @@
     .noncoffee-hero-image {
         width: min(112vw, 520px);
         max-height: 360px;
+    }
+
+    .bread-hero-word {
+        font-size: 60px;
+        top: 52px;
+    }
+
+    .bread-hero-image-wrap {
+        margin-top: 88px;
+    }
+
+    .bread-hero-image {
+        width: min(116vw, 540px);
+        max-height: 360px;
+    }
+
+    .bread-info-row {
+        grid-template-columns: minmax(0, 1.35fr) 0.55fr 0.7fr;
     }
 }
 
@@ -298,6 +332,20 @@
 
     .noncoffee-hero-image {
         width: min(116vw, 430px);
+        max-height: 320px;
+    }
+
+    .bread-hero-word {
+        font-size: 48px;
+        top: 54px;
+    }
+
+    .bread-hero-image-wrap {
+        margin-top: 76px;
+    }
+
+    .bread-hero-image {
+        width: min(118vw, 440px);
         max-height: 320px;
     }
 }
