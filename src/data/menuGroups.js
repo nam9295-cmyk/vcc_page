@@ -10,7 +10,8 @@ const makeGroup = ({
     desc,
     repImage,
     categoryIds,
-    aliases = []
+    aliases = [],
+    href
 }) => {
     const groupProducts = categoryIds.flatMap((categoryId) =>
         (products[categoryId] || []).map((product) => ({
@@ -29,6 +30,7 @@ const makeGroup = ({
         repImage,
         categoryIds,
         aliases,
+        href,
         products: groupProducts
     };
 };
@@ -122,6 +124,22 @@ export const menuSections = [
         ]
     },
     {
+        id: 'granola',
+        label: '그래놀라',
+        groups: [
+            makeGroup({
+                id: 'granola',
+                section: 'granola',
+                label: 'Granola',
+                displayWord: 'GRANOLA',
+                desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 카카오 그래놀라입니다.',
+                repImage: '/hero/hero_granola.webp',
+                categoryIds: ['cacao-granola'],
+                aliases: ['cacao-granola']
+            })
+        ]
+    },
+    {
         id: 'cake',
         label: '케이크',
         groups: [
@@ -131,8 +149,9 @@ export const menuSections = [
                 label: 'Cake',
                 displayWord: 'CAKE',
                 desc: '시그니처 수제 초콜릿 케이크 예약 주문 메뉴입니다.',
-                repImage: '/product/dark_chocolat.png',
-                categoryIds: ['cake']
+                repImage: '/hero/hero_cake.webp',
+                categoryIds: ['cake'],
+                href: 'https://cake.verygood-chocolate.com'
             })
         ]
     }

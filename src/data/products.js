@@ -173,7 +173,7 @@ export const categories = [
     { id: 'ade', name: 'Ade (Iced only)', desc: '카카오 디톡스와 과일 에이드, 아이스티 메뉴입니다.', repImage: '/product/hibiscus.png' },
     { id: 'tiramisu', name: '티라미수', desc: '클래식, 초코, 말차, 딸기, 우베 티라미수입니다.', repImage: '/hero/hero_tiramisu5ea.webp' },
     { id: 'levain-cookie', name: '르뱅쿠키', desc: '기본과 초코로 고르는 르뱅쿠키입니다.', repImage: '/hero/hero_dessert.webp' },
-    { id: 'cacao-granola', name: '카카오 그래놀라', desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 그래놀라입니다.', repImage: '/product/chocosnow.png' },
+    { id: 'cacao-granola', name: '카카오 그래놀라', desc: '플라스틱 병과 선물용 유리병으로 선택 가능한 수제 그래놀라입니다.', repImage: '/hero/hero_granola.webp' },
     { id: 'pain-au-chocolat', name: '빵오 쇼콜라', desc: '기본과 초코로 고르는 빵오 쇼콜라입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'gateau-au-chocolat', name: 'Gâteau au Chocolat', desc: '진한 초콜릿 풍미의 가토 오 쇼콜라 조각입니다.', repImage: '/hero/hero_dessert.webp' },
     { id: 'canele', name: '까눌레', desc: '겉바속쫀 식감의 당일 생산 수제 까눌레입니다.', repImage: '/product/cafe_chocolat.png' },

@@ -23,7 +23,7 @@
     z-index: 2;
     display: grid;
     max-width: var(--page-max);
-    margin: 28px auto 0;
+    margin: 8px auto 0;
     justify-items: center;
 }
 
@@ -34,7 +34,7 @@
 
 .cake-content img {
     width: min(132vw, 720px);
-    aspect-ratio: 1154 / 1363;
+    aspect-ratio: 1350 / 1080;
     object-fit: contain;
     transform: scale(1.1);
     transform-origin: center bottom;
@@ -57,7 +57,7 @@
     }
 
     .cake-content {
-        margin-top: 64px;
+        margin-top: 26px;
     }
 
     .cake-content img {
@@ -79,7 +79,7 @@
     }
 
     .cake-content {
-        margin-top: 110px;
+        margin-top: 42px;
     }
 
     .cake-content img {

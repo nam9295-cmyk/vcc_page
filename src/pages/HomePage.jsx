@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import HeroSection from '../components/sections/HeroSection';
 import DessertSection from '../components/sections/DessertSection';
+import GranolaSection from '../components/sections/GranolaSection';
 import CakeReservationSection from '../components/sections/CakeReservationSection';
 import LatestBlogSection from '../components/sections/LatestBlogSection';
 import LocationSection from '../components/sections/LocationSection';
@@ -27,6 +28,7 @@ function HomePage() {
 
             <HeroSection />
             <DessertSection />
+            <GranolaSection />
             <CakeReservationSection />
             <LatestBlogSection />
 

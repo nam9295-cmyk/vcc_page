@@ -1,0 +1,99 @@
+.granola-showcase {
+    position: relative;
+    padding: 54px 20px 58px;
+    background: var(--color-cream-white);
+    overflow: hidden;
+}
+
+.granola-display-word {
+    position: absolute;
+    z-index: 0;
+    top: 54px;
+    left: 50%;
+    width: 100%;
+    color: var(--color-butter-yellow);
+    font-size: 86px;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.granola-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    max-width: var(--page-max);
+    margin: 16px auto 0;
+    justify-items: center;
+    text-align: center;
+}
+
+.granola-image-link {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.granola-content img {
+    width: min(92vw, 520px);
+    aspect-ratio: 1350 / 1080;
+    object-fit: contain;
+}
+
+.granola-product-tag {
+    left: 60%;
+    top: 56%;
+    transform: translate(-8%, -50%);
+}
+
+.granola-content p {
+    margin: 14px 0 0;
+    color: var(--color-charcoal-press);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .granola-showcase {
+        padding: 68px 30px 78px;
+    }
+
+    .granola-display-word {
+        top: 48px;
+        font-size: 150px;
+    }
+
+    .granola-content {
+        margin-top: 38px;
+    }
+
+    .granola-content img {
+        width: min(66vw, 760px);
+    }
+
+    .granola-product-tag {
+        left: 62%;
+        top: 58%;
+        min-width: 132px;
+    }
+
+    .granola-content p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .granola-display-word {
+        top: 26px;
+        font-size: 250px;
+    }
+
+    .granola-content {
+        margin-top: 20px;
+    }
+
+    .granola-content img {
+        width: min(56vw, 820px);
+    }
+}

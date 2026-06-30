@@ -285,7 +285,7 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .menu-group-section:last-child .menu-category-grid {
+    .menu-category-grid.is-single {
         grid-template-columns: minmax(0, 420px);
         justify-content: center;
     }

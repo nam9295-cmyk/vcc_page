@@ -50,7 +50,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
     width: min(calc(100% + 28px), var(--page-max));
-    margin: 214px -14px 0;
+    margin: 154px -14px 0;
     align-items: end;
 }
 

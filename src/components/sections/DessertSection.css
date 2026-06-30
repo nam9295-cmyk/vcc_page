@@ -25,7 +25,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
     width: min(calc(100% + 36px), var(--page-max));
-    margin: 150px -18px 0;
+    margin: 72px -18px 0;
     align-items: end;
 }
 
@@ -74,7 +74,7 @@
     .dessert-products {
         gap: 26px;
         width: min(100%, var(--page-max));
-        margin: 250px auto 0;
+        margin: 170px auto 0;
     }
 
     .dessert-product img {
@@ -101,7 +101,7 @@
     }
 
     .dessert-products {
-        margin-top: 380px;
+        margin-top: 230px;
     }
 
     .dessert-product img {
