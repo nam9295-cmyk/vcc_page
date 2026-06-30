@@ -7,6 +7,7 @@ import BreadMenuPage from './BreadMenuPage';
 import ChocolateMenuPage from './ChocolateMenuPage';
 import DetoxMenuPage from './DetoxMenuPage';
 import DubaiMenuPage from './DubaiMenuPage';
+import GranolaMenuPage from './GranolaMenuPage';
 import NonCoffeeMenuPage from './NonCoffeeMenuPage';
 import TiramisuMenuPage from './TiramisuMenuPage';
 import './MenuPage.css';
@@ -57,6 +58,10 @@ function MenuDetailPage() {
 
     if (group.id === 'dubai') {
         return <DubaiMenuPage group={group} />;
+    }
+
+    if (group.id === 'granola') {
+        return <GranolaMenuPage group={group} />;
     }
 
     return (
