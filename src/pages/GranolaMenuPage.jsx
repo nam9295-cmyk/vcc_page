@@ -5,7 +5,6 @@ import './GranolaMenuPage.css';
 const HERO_IMAGE = '/hero/hero_granola.webp';
 const OG_IMAGE = 'https://kr.verygood-chocolate.com/hero/hero_granola.webp';
 const INSTAGRAM_URL = 'https://www.instagram.com/verygood_chocolate/';
-const GRANOLA_CTA_MODE = 'prelaunch';
 
 const ingredients = [
     { name: '오트밀', description: '바삭하고 고소한 베이스.', image: '/granola/ingredient-oatmeal.png' },
@@ -53,34 +52,16 @@ const productInfo = [
     { label: '제조 방식', value: '매장에서 소량씩 제조하는 수제 그래놀라바입니다.' }
 ];
 
-const ctaContent = {
-    prelaunch: {
-        title: '정식 출시 준비 중입니다.',
-        body: '출시 소식은 인스타그램과 배민 공지에서 가장 먼저 안내드릴게요.',
-        links: [
-            { label: '인스타그램 문의하기', href: INSTAGRAM_URL, external: true },
-            { label: '베리굿 메뉴 보러가기', href: '/menu' }
-        ]
-    },
-    live: {
-        title: '베리굿 카카오 그래놀라바를 만나보세요.',
-        body: '온라인과 배달 채널에서도 준비되는 대로 안내드릴게요.',
-        links: [
-            { label: '배민에서 주문하기', href: '', external: true },
-            { label: '쿠팡에서 구매하기', href: '', external: true },
-            { label: '인스타그램 DM 문의하기', href: INSTAGRAM_URL, external: true }
-        ]
-    }
-};
+const salesLinks = [
+    { label: '인스타그램 DM 문의하기', href: INSTAGRAM_URL, external: true },
+    { label: '베리굿 전체 메뉴 보기', href: '/menu' }
+];
 
 function CopyBlock({ children }) {
     return <div className="granola-copy-block">{children}</div>;
 }
 
 function GranolaMenuPage() {
-    const currentCta = ctaContent[GRANOLA_CTA_MODE];
-    const visibleCtas = currentCta.links.filter((item) => item.href);
-
     return (
         <main className="granola-page">
             <Helmet>
@@ -101,8 +82,8 @@ function GranolaMenuPage() {
                 <Link className="granola-back-link" to="/menu">전체 메뉴</Link>
                 <p className="billboard-word granola-hero-word" aria-hidden="true">GRANOLA</p>
                 <div className="granola-featured-seal" aria-hidden="true">
-                    <span>NEW</span>
-                    <b>TASTE</b>
+                    <span>NOW</span>
+                    <b>ON SALE</b>
                 </div>
 
                 <div className="granola-hero-image-wrap">
@@ -122,23 +103,11 @@ function GranolaMenuPage() {
                         한 조각에 담은 베리굿의 새로운 간식.
                     </p>
                     <p className="granola-hero-subcopy">
-                        정식 출시 전, 주문 고객님께 먼저 선보이는
+                        베리굿 매장에서 정식 판매 중인
                         <br />
-                        베리굿 카카오 그래놀라바입니다.
+                        수제 카카오 그래놀라바입니다.
                     </p>
                 </div>
-            </section>
-
-            <section className="granola-section" aria-labelledby="granola-qr-title">
-                <h2 id="granola-qr-title">맛보기로 먼저 만나보셨나요?</h2>
-                <CopyBlock>
-                    <p>베리굿에서 새롭게 준비 중인 카카오 그래놀라바입니다.</p>
-                    <p>
-                        오트밀과 견과류를 바탕으로, 카카오닙과 다크초콜릿의 쌉싸름함,
-                        크랜베리의 산뜻한 단맛을 더했습니다.
-                    </p>
-                    <p>정식 출시 전, 주문 고객님께 작은 맛보기로 먼저 소개드리고 있어요.</p>
-                </CopyBlock>
             </section>
 
             <section className="granola-section granola-story-section" aria-labelledby="granola-story-title">
@@ -250,32 +219,11 @@ function GranolaMenuPage() {
                 </CopyBlock>
             </section>
 
-            <section className="granola-section granola-prelaunch-section" aria-labelledby="granola-prelaunch-title">
-                <h2 id="granola-prelaunch-title">프리런칭 맛보기 진행 중</h2>
-                <CopyBlock>
-                    <p>
-                        베리굿 카카오 그래놀라바는
-                        <br />
-                        정식 출시 전, 주문 고객님께 맛보기로 먼저 소개드리고 있습니다.
-                    </p>
-                    <p>
-                        매일 준비되는 수량이 한정되어 있어
-                        <br />
-                        조기 소진될 수 있습니다.
-                    </p>
-                    <p>
-                        맛있게 드셨다면
-                        <br />
-                        한 줄 리뷰로 베리굿을 응원해주세요.
-                    </p>
-                </CopyBlock>
-            </section>
-
             <section className="granola-section granola-cta-section" aria-labelledby="granola-cta-title">
-                <h2 id="granola-cta-title">{currentCta.title}</h2>
-                <p>{currentCta.body}</p>
+                <h2 id="granola-cta-title">베리굿 카카오 그래놀라바, 정식 판매 중</h2>
+                <p>베리굿 매장에서 만나보세요. 당일 재고는 인스타그램 DM으로 문의해주세요.</p>
                 <div className="granola-cta-actions">
-                    {visibleCtas.map((item) => (
+                    {salesLinks.map((item) => (
                         item.external ? (
                             <a
                                 className="outline-button granola-cta-button"
