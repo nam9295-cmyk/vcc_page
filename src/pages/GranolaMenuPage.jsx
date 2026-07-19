@@ -8,22 +8,37 @@ const INSTAGRAM_URL = 'https://www.instagram.com/verygood_chocolate/';
 const GRANOLA_CTA_MODE = 'prelaunch';
 
 const ingredients = [
-    { name: '오트밀', description: '바삭하고 고소한 베이스.' },
-    { name: '카카오닙', description: '쌉싸름한 카카오의 식감.' },
-    { name: '아몬드', description: '고소하게 씹히는 견과류.' },
-    { name: '피스타치오', description: '은은한 고소함과 색감.' },
-    { name: '피칸', description: '부드럽고 깊은 견과 풍미.' },
-    { name: '크랜베리', description: '산뜻하게 남는 과일의 단맛.' },
-    { name: '카카오파우더', description: '전체 맛을 묵직하게 잡아주는 카카오 향.' },
-    { name: '다크초콜릿', description: '베리굿다운 깊은 초콜릿의 여운.' }
+    { name: '오트밀', description: '바삭하고 고소한 베이스.', image: '/granola/ingredient-oatmeal.png' },
+    { name: '카카오닙', description: '쌉싸름한 카카오의 식감.', image: '/granola/ingredient-cacao-nibs.png' },
+    { name: '아몬드', description: '고소하게 씹히는 견과류.', image: '/granola/ingredient-almond.png' },
+    { name: '피스타치오', description: '은은한 고소함과 색감.', image: '/granola/ingredient-pistachio.png' },
+    { name: '피칸', description: '부드럽고 깊은 견과 풍미.', image: '/granola/ingredient-pecan.png' },
+    { name: '크랜베리', description: '산뜻하게 남는 과일의 단맛.', image: '/granola/ingredient-cranberry.png' },
+    { name: '카카오파우더', description: '전체 맛을 묵직하게 잡아주는 카카오 향.', image: '/granola/ingredient-cacao.png' },
+    { name: '다크초콜릿', description: '베리굿다운 깊은 초콜릿의 여운.', image: '/granola/ingredient-dark-chocolate.png' }
 ];
 
 const enjoyItems = [
-    '아침 커피와 함께 가볍게',
-    '오후에 달콤한 것이 생각날 때',
-    '디저트 대신 부담 없이',
-    '차 안이나 사무실에서 간단히',
-    '선물에 함께 넣는 작은 간식으로'
+    {
+        title: '커피와 함께',
+        description: '따뜻한 커피 옆에 두는 작은 카카오 간식',
+        image: '/granola/occasion-coffee.png'
+    },
+    {
+        title: '오후 간식',
+        description: '출출한 오후, 책상 위에 가볍게',
+        image: '/granola/occasion-afternoon-energy.png'
+    },
+    {
+        title: '활동 전후',
+        description: '가방에 챙겨 어디서든 간편하게',
+        image: '/granola/occasion-workout.png'
+    },
+    {
+        title: '작은 선물',
+        description: '초콜릿을 좋아하는 사람에게 건네는 마음',
+        image: '/granola/occasion-gift.png'
+    }
 ];
 
 const productInfo = [
@@ -155,6 +170,7 @@ function GranolaMenuPage() {
                 <div className="granola-ingredient-grid">
                     {ingredients.map((item) => (
                         <article className="granola-ingredient-card" key={item.name}>
+                            <img src={item.image} alt="" loading="lazy" />
                             <h3>{item.name}</h3>
                             <p>{item.description}</p>
                         </article>
@@ -192,7 +208,13 @@ function GranolaMenuPage() {
                 <h2 id="granola-enjoy-title">이럴 때 좋아요</h2>
                 <ul className="granola-enjoy-list">
                     {enjoyItems.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item.title}>
+                            <img src={item.image} alt="" loading="lazy" />
+                            <div>
+                                <strong>{item.title}</strong>
+                                <span>{item.description}</span>
+                            </div>
+                        </li>
                     ))}
                 </ul>
             </section>
