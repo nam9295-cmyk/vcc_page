@@ -110,30 +110,6 @@ function GranolaMenuPage() {
                 </div>
             </section>
 
-            <section className="granola-section granola-story-section" aria-labelledby="granola-story-title">
-                <h2 id="granola-story-title">초콜릿 전문점이 만든 그래놀라바</h2>
-                <CopyBlock>
-                    <p>
-                        가볍게 먹을 수 있지만,
-                        <br />
-                        맛은 가볍지 않았으면 했습니다.
-                    </p>
-                    <p>
-                        베리굿은 초콜릿을 만들 때처럼
-                        <br />
-                        그래놀라바에도 카카오의 깊은 맛을 더했습니다.
-                    </p>
-                    <p>
-                        오트밀과 견과류의 고소함, 카카오닙과 다크초콜릿의 쌉싸름함,
-                        크랜베리의 산뜻함이 한 조각 안에서 이어집니다.
-                    </p>
-                    <p>
-                        초콜릿이 생각나는 순간에도, 조금 더 가볍게 즐길 수 있는
-                        베리굿의 새로운 간식입니다.
-                    </p>
-                </CopyBlock>
-            </section>
-
             <section className="granola-section granola-wide-section" aria-labelledby="granola-ingredients-title">
                 <h2 id="granola-ingredients-title">한 조각 안에 담은 재료</h2>
                 <div className="granola-ingredient-grid">
@@ -145,32 +121,6 @@ function GranolaMenuPage() {
                         </article>
                     ))}
                 </div>
-            </section>
-
-            <section className="granola-section" aria-labelledby="granola-taste-title">
-                <h2 id="granola-taste-title">고소함, 쌉싸름함, 산뜻함</h2>
-                <CopyBlock>
-                    <p>
-                        한입 베어 물면
-                        <br />
-                        오트밀과 견과류의 고소함이 먼저 느껴지고,
-                    </p>
-                    <p>
-                        카카오닙과 다크초콜릿의 쌉싸름함이
-                        <br />
-                        맛의 중심을 잡아줍니다.
-                    </p>
-                    <p>
-                        마지막에는 크랜베리의 산뜻한 단맛이 남아
-                        <br />
-                        무겁지 않게 마무리됩니다.
-                    </p>
-                    <p>
-                        달기만 한 간식보다,
-                        <br />
-                        조금 더 깊은 맛을 찾는 분께 추천합니다.
-                    </p>
-                </CopyBlock>
             </section>
 
             <section className="granola-section granola-enjoy-section" aria-labelledby="granola-enjoy-title">
