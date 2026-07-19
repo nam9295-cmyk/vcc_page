@@ -67,12 +67,14 @@
 .granola-hero-image-wrap {
     position: relative;
     z-index: 2;
-    display: grid;
+    display: flex;
+    width: 100%;
     margin: 74px auto 0;
-    justify-items: center;
+    justify-content: center;
 }
 
 .granola-hero-image {
+    flex: 0 0 auto;
     width: min(112vw, 620px);
     max-width: none;
     max-height: 430px;
