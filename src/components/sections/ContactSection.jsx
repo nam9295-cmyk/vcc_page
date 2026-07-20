@@ -42,7 +42,7 @@ function ContactSection() {
     };
 
     return (
-        <section className="contact-section">
+        <section id="contact" className="contact-section">
             <h2 className="section-title">CONTACT US</h2>
             <div className="contact-container">
                 <form onSubmit={handleSubmit}>
