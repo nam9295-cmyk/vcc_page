@@ -1,13 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import './LegalPage.css';
 
 function TermsPage() {
     return (
         <>
-            <Helmet>
-                <title>이용약관 | 베리굿초콜릿</title>
-                <meta name="description" content="베리굿초콜릿 서비스 이용약관" />
-            </Helmet>
 
             <main className="legal-page">
                 <h1>이용약관</h1>

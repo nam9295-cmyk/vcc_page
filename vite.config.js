@@ -5,13 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    manifest: true,
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'router': ['react-router-dom'],
           'firebase': ['firebase/app', 'firebase/firestore', 'firebase/auth'],
-          'seo': ['react-helmet-async'],
         },
       },
     },

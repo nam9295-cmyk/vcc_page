@@ -1,9 +1,7 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './GranolaMenuPage.css';
 
 const HERO_IMAGE = '/hero/hero_granola.webp';
-const OG_IMAGE = 'https://kr.verygood-chocolate.com/hero/hero_granola.webp';
 const INSTAGRAM_URL = 'https://www.instagram.com/verygood_chocolate/';
 
 const ingredients = [
@@ -64,19 +62,6 @@ function CopyBlock({ children }) {
 function GranolaMenuPage() {
     return (
         <main className="granola-page">
-            <Helmet>
-                <title>베리굿 카카오 그래놀라바 | Very Good Chocolate</title>
-                <meta
-                    name="description"
-                    content="오트밀, 견과류, 카카오닙, 다크초콜릿을 한 조각에 담은 베리굿의 수제 카카오 그래놀라바."
-                />
-                <meta property="og:title" content="베리굿 카카오 그래놀라바 | Very Good Chocolate" />
-                <meta
-                    property="og:description"
-                    content="오트밀, 견과류, 카카오닙, 다크초콜릿을 한 조각에 담은 베리굿의 수제 카카오 그래놀라바."
-                />
-                <meta property="og:image" content={OG_IMAGE} />
-            </Helmet>
 
             <section className="granola-hero" aria-labelledby="granola-title">
                 <Link className="granola-back-link" to="/menu">전체 메뉴</Link>

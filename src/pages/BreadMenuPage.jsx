@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './ChocolateMenuPage.css';
 
@@ -68,13 +67,9 @@ function FeedImage({ src, alt }) {
     );
 }
 
-function BreadMenuPage({ group }) {
+function BreadMenuPage() {
     return (
         <main className="chocolate-intro-page bread-intro-page">
-            <Helmet>
-                <title>{group.label} | 베리굿초콜릿 메뉴</title>
-                <meta name="description" content={group.desc} />
-            </Helmet>
 
             <section className="chocolate-hero bread-hero" aria-labelledby="bread-title">
                 <Link className="chocolate-back-link" to="/menu">전체 메뉴</Link>

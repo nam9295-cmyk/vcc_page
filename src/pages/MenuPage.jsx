@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { menuSections } from '../data/menuGroups';
 import './MenuPage.css';
@@ -44,13 +43,6 @@ function MenuPage() {
 
     return (
         <main className="menu-page">
-            <Helmet>
-                <title>전체 메뉴 | 베리굿초콜릿</title>
-                <meta
-                    name="description"
-                    content="베리굿초콜릿의 리얼 가나슈 초코 모찌 5종, 핫초콜릿, 커피, 디톡스 티, 디저트, 케이크 예약 메뉴를 한눈에 확인하세요."
-                />
-            </Helmet>
 
             <section className="menu-page-hero" aria-labelledby="menu-page-title">
                 <h1 id="menu-page-title" className="billboard-word menu-page-word">MENU</h1>

@@ -1,13 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import './LegalPage.css';
 
 function PrivacyPage() {
     return (
         <>
-            <Helmet>
-                <title>개인정보처리방침 | 베리굿초콜릿</title>
-                <meta name="description" content="베리굿초콜릿 개인정보처리방침" />
-            </Helmet>
 
             <main className="legal-page">
                 <h1>개인정보처리방침</h1>

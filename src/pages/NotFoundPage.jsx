@@ -1,13 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import './NotFoundPage.css';
 
 function NotFoundPage() {
     return (
         <>
-            <Helmet>
-                <title>페이지를 찾을 수 없습니다 | 베리굿초콜릿</title>
-            </Helmet>
 
             <main className="not-found-page">
                 <div className="not-found-content">

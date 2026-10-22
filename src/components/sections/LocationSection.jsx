@@ -1,4 +1,5 @@
 import './LocationSection.css';
+import { store } from '../../data/store';
 
 function LocationSection() {
     return (
@@ -6,16 +7,17 @@ function LocationSection() {
             <h2 className="location-title">LOCATION</h2>
             <div className="location-content">
                 <p className="location-text">
-                    대구 수성구 상록로11길 13, 1층<br />
-                    지도를 클릭하면 네이버지도가 열려요 :)
+                    {store.address}<br />
+                    {store.hours}<br />
+                    <a href="tel:07078400717">{store.phone}</a>
                 </p>
                 <a
-                    href="https://map.naver.com/p/entry/place/1069379954"
+                    href={store.naverMap}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="location-map-link"
                 >
-                    <img src="/vcc_map.png" alt="오시는 길 약도" className="location-map" />
+                    <img src="/vcc_map.png" alt="대구 수성구 상록로11길 13 베리굿초콜릿 오시는 길 약도" loading="lazy" className="location-map" />
                 </a>
             </div>
         </section>

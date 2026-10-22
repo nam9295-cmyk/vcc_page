@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './ChocolateMenuPage.css';
 
@@ -8,13 +7,9 @@ const nonCoffeeItems = [
     { name: '딸기 라떼', price: '6,500원', note: '딸기 과육감이 살아있는 논커피 라떼' }
 ];
 
-function NonCoffeeMenuPage({ group }) {
+function NonCoffeeMenuPage() {
     return (
         <main className="chocolate-intro-page noncoffee-intro-page">
-            <Helmet>
-                <title>{group.label} | 베리굿초콜릿 메뉴</title>
-                <meta name="description" content={group.desc} />
-            </Helmet>
 
             <section className="chocolate-hero noncoffee-hero" aria-labelledby="noncoffee-title">
                 <Link className="chocolate-back-link" to="/menu">전체 메뉴</Link>

@@ -1,13 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import './BusinessStoryPage.css';
 
 function BusinessStoryPage() {
     return (
         <>
-            <Helmet>
-                <title>브랜드 스토리 | 베리굿초콜릿</title>
-                <meta name="description" content="베리굿초콜릿의 브랜드 스토리. 달콤한 초콜릿으로 일상에 행복을 전하는 여정." />
-            </Helmet>
 
             <main className="story-page">
                 <section className="story-hero">

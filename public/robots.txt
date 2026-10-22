@@ -1,33 +1,21 @@
+# Public pages are crawlable. Admin is excluded for every listed crawler.
+# Search crawlers and training crawlers are different; existing GPTBot permission is preserved.
 User-agent: *
-Allow: /
-Disallow: /admin
-
-# AI Bot Access - Explicitly Allow AI Crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
+User-agent: Googlebot
+User-agent: bingbot
+User-agent: Yeti
+User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: Anthropic-AI
+User-agent: Claude-Web
 User-agent: Cohere-AI
-Allow: /
-
 User-agent: Bytespider
 Allow: /
-
-# LLM Context File
-# AI agents can find site summary at /llms.txt
+Disallow: /admin
 
 Sitemap: https://kr.verygood-chocolate.com/sitemap.xml

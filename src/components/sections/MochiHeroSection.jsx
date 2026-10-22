@@ -49,7 +49,7 @@ function MochiHeroSection({ detail = false }) {
             </div>
             <div className="mochi-hero-copy">
                 <h1 id="mochi-title">리얼 가나슈 초코 모찌</h1>
-                <p>얇고 쫀득한 찹쌀피, 속까지 진한 초콜릿.<br />대구 베리굿초콜릿의 모찌를 만나보세요.</p>
+                <p>얇고 쫀득한 찹쌀피, 속까지 진한 초콜릿.<br />대구 수성구 베리굿초콜릿의 초코모찌를 만나보세요.</p>
                 {detail ? (
                     <a className="outline-button mochi-hero-button" href="#mochi-flavors">다섯 가지 맛 살펴보기 <span aria-hidden="true">↓</span></a>
                 ) : (

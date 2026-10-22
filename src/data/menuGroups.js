@@ -1,5 +1,5 @@
-import { categories, products } from './products';
-import { mochiFlavors } from './mochi';
+import { categories, products } from './products.js';
+import { mochiFlavors } from './mochi.js';
 
 const categoryById = Object.fromEntries(categories.map((category) => [category.id, category]));
 

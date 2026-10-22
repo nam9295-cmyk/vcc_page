@@ -1,0 +1,235 @@
+{
+  "_LegalPage-CHgjB_-B.css": {
+    "file": "assets/LegalPage-CHgjB_-B.css",
+    "src": "_LegalPage-CHgjB_-B.css"
+  },
+  "_MenuPage-DUqaCmOh.css": {
+    "file": "assets/MenuPage-DUqaCmOh.css",
+    "src": "_MenuPage-DUqaCmOh.css"
+  },
+  "_firebase-XxE5dI4B.js": {
+    "file": "assets/firebase-XxE5dI4B.js",
+    "name": "firebase"
+  },
+  "_react-vendor-Dh3zDKDA.js": {
+    "file": "assets/react-vendor-Dh3zDKDA.js",
+    "name": "react-vendor"
+  },
+  "_router-BXYkmcIQ.js": {
+    "file": "assets/router-BXYkmcIQ.js",
+    "name": "router",
+    "imports": [
+      "_react-vendor-Dh3zDKDA.js"
+    ]
+  },
+  "index.html": {
+    "file": "assets/index-A3G_ZTJO.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "dynamicImports": [
+      "src/pages/AboutPage.jsx",
+      "src/pages/MenuPage.jsx",
+      "src/pages/MochiMenuPage.jsx",
+      "src/pages/MenuDetailPage.jsx",
+      "src/pages/GranolaMenuPage.jsx",
+      "src/pages/BlogPage.jsx",
+      "src/pages/BlogDetailPage.jsx",
+      "src/pages/BusinessStoryPage.jsx",
+      "src/pages/PrivacyPage.jsx",
+      "src/pages/TermsPage.jsx",
+      "src/pages/AdminPage.jsx",
+      "src/pages/NotFoundPage.jsx"
+    ],
+    "css": [
+      "assets/index-CQWPrfmx.css"
+    ]
+  },
+  "src/pages/AboutPage.jsx": {
+    "file": "assets/AboutPage-DAzZGgpH.js",
+    "name": "AboutPage",
+    "src": "src/pages/AboutPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/AboutPage-BaJ0Z5hJ.css"
+    ]
+  },
+  "src/pages/AdminPage.jsx": {
+    "file": "assets/AdminPage-9TsCtZvN.js",
+    "name": "AdminPage",
+    "src": "src/pages/AdminPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_firebase-XxE5dI4B.js",
+      "_react-vendor-Dh3zDKDA.js"
+    ],
+    "css": [
+      "assets/AdminPage-CA7HHC0P.css"
+    ]
+  },
+  "src/pages/BlogDetailPage.jsx": {
+    "file": "assets/BlogDetailPage-CYM-aoyV.js",
+    "name": "BlogDetailPage",
+    "src": "src/pages/BlogDetailPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_firebase-XxE5dI4B.js",
+      "_react-vendor-Dh3zDKDA.js"
+    ],
+    "css": [
+      "assets/BlogDetailPage-C9UmcabN.css"
+    ]
+  },
+  "src/pages/BlogPage.jsx": {
+    "file": "assets/BlogPage-DuMEqJ56.js",
+    "name": "BlogPage",
+    "src": "src/pages/BlogPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_firebase-XxE5dI4B.js",
+      "_react-vendor-Dh3zDKDA.js"
+    ],
+    "css": [
+      "assets/BlogPage-RqB1Go3P.css"
+    ]
+  },
+  "src/pages/BusinessStoryPage.jsx": {
+    "file": "assets/BusinessStoryPage-Dyfg-8Y2.js",
+    "name": "BusinessStoryPage",
+    "src": "src/pages/BusinessStoryPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/BusinessStoryPage-BBDH8azM.css"
+    ]
+  },
+  "src/pages/GranolaMenuPage.jsx": {
+    "file": "assets/GranolaMenuPage-od06ns_x.js",
+    "name": "GranolaMenuPage",
+    "src": "src/pages/GranolaMenuPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/GranolaMenuPage-CEf0nNA3.css"
+    ]
+  },
+  "src/pages/MenuDetailPage.jsx": {
+    "file": "assets/MenuDetailPage-xjXI8Ukx.js",
+    "name": "MenuDetailPage",
+    "src": "src/pages/MenuDetailPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "src/pages/GranolaMenuPage.jsx",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/MenuDetailPage-DOQQfCvA.css",
+      "assets/MenuPage-DUqaCmOh.css"
+    ]
+  },
+  "src/pages/MenuPage.jsx": {
+    "file": "assets/MenuPage-d84A_LqB.js",
+    "name": "MenuPage",
+    "src": "src/pages/MenuPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/MenuPage-DUqaCmOh.css"
+    ]
+  },
+  "src/pages/MochiMenuPage.jsx": {
+    "file": "assets/MochiMenuPage-CTxALQ-V.js",
+    "name": "MochiMenuPage",
+    "src": "src/pages/MochiMenuPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/MochiMenuPage-B3wd_PwG.css"
+    ]
+  },
+  "src/pages/NotFoundPage.jsx": {
+    "file": "assets/NotFoundPage-BMXCb34k.js",
+    "name": "NotFoundPage",
+    "src": "src/pages/NotFoundPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/NotFoundPage-D07Ur31v.css"
+    ]
+  },
+  "src/pages/PrivacyPage.jsx": {
+    "file": "assets/PrivacyPage-CZnKLcK3.js",
+    "name": "PrivacyPage",
+    "src": "src/pages/PrivacyPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/LegalPage-CHgjB_-B.css"
+    ]
+  },
+  "src/pages/TermsPage.jsx": {
+    "file": "assets/TermsPage-CU7AgWfB.js",
+    "name": "TermsPage",
+    "src": "src/pages/TermsPage.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_router-BXYkmcIQ.js",
+      "_react-vendor-Dh3zDKDA.js",
+      "_firebase-XxE5dI4B.js"
+    ],
+    "css": [
+      "assets/LegalPage-CHgjB_-B.css"
+    ]
+  }
+}

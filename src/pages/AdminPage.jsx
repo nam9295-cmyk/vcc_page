@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { collection, getDocs, addDoc, deleteDoc, doc, query, orderBy, serverTimestamp } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import './AdminPage.css';
@@ -94,9 +93,6 @@ function AdminPage() {
 
     return (
         <>
-            <Helmet>
-                <title>관리자 | 베리굿초콜릿</title>
-            </Helmet>
 
             <main className="admin-page">
                 <h1>블로그 관리</h1>

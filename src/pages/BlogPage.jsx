@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import BlogCard from '../components/common/BlogCard';
@@ -33,10 +32,6 @@ function BlogPage() {
 
     return (
         <>
-            <Helmet>
-                <title>블로그 | 베리굿초콜릿</title>
-                <meta name="description" content="베리굿초콜릿의 초콜릿 이야기, 레시피, 이벤트 소식을 확인하세요." />
-            </Helmet>
 
             <main className="blog-page">
                 <h1 className="section-title">BLOG</h1>

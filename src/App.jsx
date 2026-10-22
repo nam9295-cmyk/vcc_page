@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 // Lazy load other pages for better performance
@@ -18,10 +17,8 @@ const TermsPage = lazy(() => import('./pages/TermsPage'));
 const AdminPage = lazy(() => import('./pages/AdminPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
-function App() {
+export function AppRoutes() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
         <Suspense fallback={<div className="loading-page">Loading...</div>}>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -42,9 +39,11 @@ function App() {
             </Route>
           </Routes>
         </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
   );
+}
+
+function App() {
+  return <BrowserRouter><AppRoutes /></BrowserRouter>;
 }
 
 export default App;

@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import './BlogDetailPage.css';
+import { getSeoConfig } from '../seo/config';
+import { applySeo } from '../seo/head';
 
 const normalizeHtml = (htmlContent) => {
     if (!htmlContent) return '';
@@ -16,30 +17,31 @@ const normalizeHtml = (htmlContent) => {
     return htmlContent;
 };
 
-function BlogDetailPage() {
-    const { id } = useParams();
+function BlogPost({ id }) {
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const contentRef = useRef(null);
 
-    const fetchPost = useCallback(async () => {
-        try {
-            const docRef = doc(db, "drink_stories", id);
-            const docSnap = await getDoc(docRef);
-
-            if (docSnap.exists()) {
-                setPost({ id: docSnap.id, ...docSnap.data() });
-            }
-        } catch (error) {
-            console.error("Error fetching post:", error);
-        } finally {
-            setLoading(false);
-        }
+    useEffect(() => {
+        let active = true;
+        getDoc(doc(db, "drink_stories", id))
+            .then(snapshot => {
+                if (active) setPost(snapshot.exists() ? { id: snapshot.id, ...snapshot.data() } : null);
+            })
+            .catch(error => console.error("Error fetching post:", error))
+            .finally(() => { if (active) setLoading(false); });
+        return () => { active = false; };
     }, [id]);
 
     useEffect(() => {
-        fetchPost();
-    }, [fetchPost]);
+        if (loading) return;
+        let summary = post?.summary;
+        if (post && !summary && post.content) {
+            const content = new DOMParser().parseFromString(post.content, 'text/html');
+            summary = `${content.body.textContent.slice(0, 150)}…`;
+        }
+        applySeo(getSeoConfig(`/blog/${id}`, { post: post ? { ...post, summary } : null, missing: !post }));
+    }, [id, post, loading]);
 
     // 이미지 지그재그 레이아웃 적용
     useEffect(() => {
@@ -99,27 +101,8 @@ function BlogDetailPage() {
         );
     }
 
-    const getSummary = () => {
-        if (post.summary) return post.summary;
-        if (post.content) {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = post.content;
-            return tempDiv.textContent.substring(0, 150) + '...';
-        }
-        return '베리굿초콜릿 블로그 글';
-    };
-
     return (
         <>
-            <Helmet>
-                <title>{post.title} | 베리굿초콜릿 블로그</title>
-                <meta name="description" content={getSummary()} />
-                <link rel="canonical" href={`https://kr.verygood-chocolate.com/blog/${id}`} />
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={`${post.title} | 베리굿초콜릿 블로그`} />
-                <meta property="og:description" content={getSummary()} />
-                {post.imageUrl && <meta property="og:image" content={post.imageUrl} />}
-            </Helmet>
 
             <article className="blog-detail-section">
                 <div className="post-container">
@@ -143,6 +126,11 @@ function BlogDetailPage() {
             </article>
         </>
     );
+}
+
+function BlogDetailPage() {
+    const { id } = useParams();
+    return <BlogPost key={id} id={id} />;
 }
 
 export default BlogDetailPage;

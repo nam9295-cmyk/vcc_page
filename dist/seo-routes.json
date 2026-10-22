@@ -1,0 +1,34 @@
+{
+  "routes": {
+    "/": "/index.html",
+    "/menu": "/menu.html",
+    "/menu/mochi": "/menu/mochi.html",
+    "/about": "/about.html",
+    "/business-story": "/business-story.html",
+    "/blog": "/blog.html",
+    "/privacy": "/privacy.html",
+    "/terms": "/terms.html",
+    "/admin": "/admin.html",
+    "/404": "/404.html",
+    "/menu/chocolate": "/menu/chocolate.html",
+    "/menu/ade": "/menu/ade.html",
+    "/menu/detox": "/menu/detox.html",
+    "/menu/noncoffee": "/menu/noncoffee.html",
+    "/menu/tiramisu": "/menu/tiramisu.html",
+    "/menu/bread": "/menu/bread.html",
+    "/menu/dubai": "/menu/dubai.html",
+    "/menu/granola": "/menu/granola.html"
+  },
+  "redirects": {
+    "/granola": "/menu/granola",
+    "/menu/hot-chocolate": "/menu/chocolate",
+    "/menu/cacao-detox-tea": "/menu/detox",
+    "/menu/non-coffee": "/menu/noncoffee",
+    "/menu/levain-cookie": "/menu/bread",
+    "/menu/pain-au-chocolat": "/menu/bread",
+    "/menu/gateau-au-chocolat": "/menu/bread",
+    "/menu/cacao-granola": "/menu/granola",
+    "/menu/cake": "https://cake.verygood-chocolate.com/"
+  },
+  "blogFallback": "/blog-entry.html"
+}

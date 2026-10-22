@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import './ChocolateMenuPage.css';
 
@@ -29,13 +28,9 @@ const feedScenes = [
     }
 ];
 
-function AdeMenuPage({ group }) {
+function AdeMenuPage() {
     return (
         <main className="chocolate-intro-page ade-intro-page">
-            <Helmet>
-                <title>{group.label} | 베리굿초콜릿 메뉴</title>
-                <meta name="description" content={group.desc} />
-            </Helmet>
 
             <section className="chocolate-hero ade-hero" aria-labelledby="ade-title">
                 <Link className="chocolate-back-link" to="/menu">전체 메뉴</Link>

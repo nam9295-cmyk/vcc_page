@@ -1,13 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import './AboutPage.css';
 
 function AboutPage() {
     return (
         <>
-            <Helmet>
-                <title>회사소개 | 베리굿초콜릿</title>
-                <meta name="description" content="베리굿초콜릿(VCC) 회사소개. 대구 수성구에서 벨기에산 프리미엄 커버춰 초콜릿으로 만드는 수제 초콜릿 전문점입니다." />
-            </Helmet>
 
             <main className="about-page">
                 <section className="about-hero">
