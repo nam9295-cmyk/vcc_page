@@ -25,23 +25,23 @@
 ### Task 1: Shared facts and SEO model
 **Files:** src/data/store.js, src/data/mochi.js, src/seo/config.js, src/seo/head.js, src/components/sections/FAQSection.jsx, src/pages/MochiMenuPage.jsx, tests/seo.test.mjs.
 **Interfaces:** getSeoConfig(pathname, options?) returns title/description/canonical/robots/image/structuredData; renderHead(config) returns safe HTML; applySeo(config) updates browser head.
-- [ ] Write tests for canonical routes, five-flavor Menu schema, verified daily hours/address/phone, no fabricated offers/reviews, private/missing/blog metadata, escaping.
-- [ ] Run node --test tests/seo.test.mjs; confirm missing functionality fails.
-- [ ] Implement shared identity, FAQ, metadata and client updates; remove conflicting per-page Helmet tags.
-- [ ] Run tests and lint; commit source changes with task 2 build outputs.
+- [x] Write tests for canonical routes, five-flavor Menu schema, verified daily hours/address/phone, no fabricated offers/reviews, private/missing/blog metadata, escaping.
+- [x] Run node --test tests/seo.test.mjs; confirm missing functionality fails.
+- [x] Implement shared identity, FAQ, metadata and client updates; remove conflicting per-page Helmet tags.
+- [x] Run tests and lint; commit source changes with task 2 build outputs.
 
 ### Task 2: Crawlable build and routing
 **Files:** src/entry-server.jsx, src/App.jsx, scripts/generate-seo-pages.mjs, scripts/preview-seo-pages.mjs, package.json, vite.config.js, public/robots.txt, generated sitemap/llms/redirects, tests/rendering.test.mjs, tests/routing.test.mjs.
 **Interfaces:** generator uses task 1 config/head and the existing AppRoutes; preview serves the same route/redirect manifest as deployment.
-- [ ] Write integration tests requiring nonempty route HTML, unique head fields, five flavor descriptions, correct asset references and preservation of verification tags; route tests cover 200/301/404/blog fallback.
-- [ ] Run tests against old dist and confirm failures.
-- [ ] Generate route-specific HTML and CSS references, canonical redirects, image sitemap and factual llms summaries. Preserve narrowly scoped blog fallback.
-- [ ] Run npm run build, npm test, npm run lint; inspect desktop/mobile and browser navigation.
+- [x] Write integration tests requiring nonempty route HTML, unique head fields, five flavor descriptions, correct asset references and preservation of verification tags; route tests cover 200/301/404/blog fallback.
+- [x] Run tests against old dist and confirm failures.
+- [x] Generate route-specific HTML and CSS references, canonical redirects, image sitemap and factual llms summaries. Preserve narrowly scoped blog fallback.
+- [x] Run npm run build, npm test, npm run lint; inspect desktop/mobile and browser navigation.
 
 ### Task 3: Review, publish and search registration
 **Files:** README.md, tracked dist, ignored qa.local/search-registration.local evidence.
-- [ ] Request one independent whole-branch review and resolve material findings.
-- [ ] Verify approved design and production build; commit and push preview.
-- [ ] Verify Cloudflare preview HTTP status/head/body; finalize on main and inspect live domain.
-- [ ] Register/refresh KR sitemap and request home/mochi crawling in available Google/Naver/Bing consoles. Verify business profile homepage link where available; preserve cake reservation links.
-- [ ] Record exact completed vs pending status and leave local Git synchronized.
+- [x] Request one independent whole-branch review and resolve material findings.
+- [x] Verify approved design and production build; commit and push preview.
+- [x] Verify Cloudflare preview HTTP status/head/body; finalize on main and inspect live domain.
+- [x] Register/refresh KR sitemap and request home/mochi crawling in available Google/Naver/Bing consoles. Verify business profile homepage link where available; preserve cake reservation links.
+- [x] Record exact completed vs pending status and leave local Git synchronized.

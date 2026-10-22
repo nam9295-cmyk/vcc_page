@@ -33,3 +33,15 @@ npm run preview
 - Google/Naver 소유권 확인 메타 태그와 GA, Firebase/문의 폼 연결은 유지합니다.
 
 AI 노출을 위한 별도 순위 보장 설정은 없습니다. `llms` 파일은 사실 요약 보조 자료이며, 본문 접근성·일관된 매장 정보·정상 색인이 우선입니다. [Google AI 검색 안내](https://developers.google.com/search/docs/appearance/ai-features), [OpenAI 크롤러 안내](https://developers.openai.com/api/docs/bots), [Cloudflare 정적 경로 처리](https://developers.cloudflare.com/pages/configuration/serving-pages/)를 참고했습니다.
+
+## 배포·검색 등록 기록 — 2026-10-22
+
+- 모찌 대표 사진 3장과 초코모찌 중심 검색 개선을 운영 사이트에 배포했습니다. 기능 배포 커밋은 `4aa9169`이며, 이후 문서 커밋은 화면 동작을 바꾸지 않습니다.
+- Google Search Console: 사이트맵을 다시 제출하고 홈(`/`), 전체 메뉴(`/menu`), 모찌(`/menu/mochi`)의 색인 요청이 접수됐습니다. 이전 전체 메뉴 보고서에 있던 잘못된 대표 URL(`/privacy`) 문제는 페이지별 canonical로 수정하고 재수집을 요청했습니다.
+- 네이버 서치어드바이저: 기존 `/sitemap.xml` 등록을 유지하며 최신 14개 URL을 제공합니다. 같은 핵심 페이지 3개의 수집 요청이 접수됐습니다.
+- Bing Webmaster Tools: KR 사이트 소유권 확인, 사이트맵 제출, 핵심 페이지 3개 URL 제출을 완료했습니다.
+- Google 매장 프로필의 홈페이지는 이미 KR 주소로 연결되어 있음을 확인했습니다. 네이버 스마트플레이스에는 KR 홈페이지 링크를 추가하고 저장 후 유지되는 것을 확인했습니다. 기존 케이크 예약 링크도 유지합니다.
+- 영업시간은 소유자 확인에 따라 매일 10:00–22:00입니다. 자동 테스트 13개, lint, 빌드가 통과했고 운영 도메인의 정적 경로·리다이렉트·404 및 모바일 390px/320px 가로 넘침을 확인했습니다.
+- 로컬과 원격은 `main`으로 정리했습니다. 이전 상태는 `backup/kr-before-mochi-2026-10-22`, `backup/kr-legacy-2026-10-22` 태그에 보관했습니다.
+
+검색엔진에 요청이 접수된 상태이며 새 페이지의 실제 색인·검색 노출은 각 서비스의 후속 처리 결과입니다. 인증된 콘솔 화면과 상세 확인 자료는 Git에서 제외되는 로컬 `search-registration.local/`에 보관합니다.
