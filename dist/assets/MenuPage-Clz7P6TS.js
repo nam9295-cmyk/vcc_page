@@ -1,4 +1,4 @@
-import{b as g}from"./index-DoIwrlWa.js";const e=(a,c=a)=>`배달 ${a}원
+import{b as g}from"./index-BIQk6xma.js";const e=(a,c=a)=>`배달 ${a}원
 픽업 ${c}원`,u={"hot-chocolate":[{id:"dark-57",name:"다크 57.9%",description:e("6,900","6,500"),image:"/product/dark_chocolat.png"},{id:"dark-70",name:"다크 70.5%",description:e("7,500","7,000"),image:"/product/dark_chocolat.png"},{id:"dark-100",name:"다크 100%",description:`1컵
 ${e("7,900","7,500")}`,image:"/product/dark_chocolat.png"},{id:"mild-milk",name:"마일드 밀크",description:`1컵
 ${e("7,500","7,000")}`,image:"/product/cafe_chocolat.png"}],"coffee-classics":[{id:"americano",name:"아메리카노",description:e("3,300","3,000")},{id:"cafe-latte",name:"카페 라떼",description:e("3,800"),image:"/product/cafe_latte.png"},{id:"vanilla-latte",name:"바닐라 라떼",description:e("4,300"),image:"/product/vanilla_latte.png"},{id:"caramel-latte",name:"카라멜라떼",description:e("4,300"),image:"/product/caramel_latte.png"},{id:"almond-latte",name:"아몬드라떼",description:e("4,300"),image:"/product/almond_latte.png"},{id:"matcha-latte",name:"말차라떼",description:`6500

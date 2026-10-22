@@ -64,6 +64,71 @@
     border-color: var(--color-forest-heritage);
 }
 
+.mochi-hero--trio {
+    overflow: hidden;
+}
+
+.mochi-hero--trio .mochi-hero-visual {
+    padding-top: 46px;
+}
+
+.mochi-hero-products {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: end;
+    gap: 4px;
+    width: 100%;
+}
+
+.mochi-hero-product {
+    min-width: 0;
+}
+
+.mochi-image-link {
+    width: 100%;
+}
+
+.mochi-product-image {
+    display: block;
+    width: 130%;
+    max-width: none;
+    height: auto;
+}
+
+.mochi-hero-product .mochi-product-tag {
+    position: relative;
+    min-width: 0;
+    min-height: 36px;
+    margin-top: -22px;
+    padding: 8px 6px;
+    font-size: 12px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.mochi-hero-product .mochi-product-tag::before,
+.mochi-hero-product .mochi-product-tag::after {
+    width: 10px;
+}
+
+.mochi-hero-product .mochi-product-tag::before {
+    left: -6px;
+}
+
+.mochi-hero-product .mochi-product-tag::after {
+    right: -6px;
+}
+
+.mochi-image-link:focus-visible {
+    outline: 2px solid var(--color-forest-heritage);
+    outline-offset: 6px;
+}
+
+.mochi-hero--trio .mochi-hero-copy {
+    margin-top: 28px;
+}
+
 .mochi-hero-button:focus-visible {
     outline: 2px solid var(--color-forest-heritage);
     outline-offset: 4px;
@@ -89,5 +154,29 @@
 
     .mochi-hero-copy p {
         font-size: 17px;
+    }
+
+    .mochi-hero--trio .mochi-hero-visual {
+        padding-top: 48px;
+    }
+
+    .mochi-hero-products {
+        gap: 36px;
+    }
+
+    .mochi-product-image {
+        width: 100%;
+    }
+
+    .mochi-hero-product .mochi-product-tag {
+        min-width: 132px;
+        min-height: 48px;
+        margin-top: -44px;
+        padding: 10px 18px;
+        font-size: 18px;
+    }
+
+    .mochi-hero--trio .mochi-hero-copy {
+        margin-top: 16px;
     }
 }
