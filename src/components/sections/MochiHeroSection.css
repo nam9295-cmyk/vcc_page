@@ -1,0 +1,93 @@
+.mochi-hero {
+    padding: 104px 20px 56px;
+    color: var(--color-forest-heritage);
+    background: var(--color-cream-white);
+    text-align: center;
+}
+
+.mochi-hero-visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 18px;
+}
+
+.mochi-display-word {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: clamp(78px, 23vw, 280px);
+    line-height: 0.8;
+}
+
+.mochi-hero-image {
+    position: relative;
+    width: min(100%, 520px);
+    height: auto;
+    display: block;
+}
+
+.mochi-hero-copy {
+    position: relative;
+    margin: -8px auto 0;
+    max-width: 600px;
+}
+
+.mochi-hero-copy h1 {
+    font-size: clamp(26px, 3.2vw, 40px);
+    font-weight: 900;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+.mochi-hero-copy p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+.mochi-hero-button {
+    gap: 18px;
+    margin-top: 24px;
+    background: var(--color-forest-heritage);
+    color: var(--color-cream-white);
+}
+
+.mochi-hero-button:hover,
+.mochi-hero-button:focus-visible {
+    background: var(--color-cream-white);
+    color: var(--color-forest-heritage);
+    border-color: var(--color-forest-heritage);
+}
+
+.mochi-hero-button:focus-visible {
+    outline: 2px solid var(--color-forest-heritage);
+    outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+    .mochi-hero {
+        padding: 110px 30px 48px;
+    }
+
+    .mochi-hero-visual {
+        padding-top: 24px;
+    }
+
+    .mochi-hero-image {
+        width: 440px;
+        margin-bottom: -50px;
+    }
+
+    .mochi-hero-copy {
+        margin-top: 0;
+    }
+
+    .mochi-hero-copy p {
+        font-size: 17px;
+    }
+}

@@ -7,6 +7,7 @@ import { lazy, Suspense } from 'react';
 
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const MenuPage = lazy(() => import('./pages/MenuPage'));
+const MochiMenuPage = lazy(() => import('./pages/MochiMenuPage'));
 const MenuDetailPage = lazy(() => import('./pages/MenuDetailPage'));
 const GranolaMenuPage = lazy(() => import('./pages/GranolaMenuPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
               <Route path="menu" element={<MenuPage />} />
+              <Route path="menu/mochi" element={<MochiMenuPage />} />
               <Route path="granola" element={<GranolaMenuPage />} />
               <Route path="menu/granola" element={<GranolaMenuPage />} />
               <Route path="menu/:categoryId" element={<MenuDetailPage />} />

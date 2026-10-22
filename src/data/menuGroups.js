@@ -1,4 +1,5 @@
 import { categories, products } from './products';
+import { mochiFlavors } from './mochi';
 
 const categoryById = Object.fromEntries(categories.map((category) => [category.id, category]));
 
@@ -36,6 +37,21 @@ const makeGroup = ({
 };
 
 export const menuSections = [
+    {
+        id: 'mochi',
+        label: '모찌',
+        groups: [{
+            id: 'mochi',
+            section: 'mochi',
+            label: '리얼 가나슈 초코 모찌',
+            displayWord: 'MOCHI',
+            desc: '얇고 쫀득한 찹쌀피에 진한 초콜릿. 오리지널부터 과일 모찌까지 다섯 가지 맛입니다.',
+            repImage: '/mochi/chocolate.webp',
+            categoryIds: [],
+            aliases: [],
+            products: mochiFlavors
+        }]
+    },
     {
         id: 'drink',
         label: '드링크',

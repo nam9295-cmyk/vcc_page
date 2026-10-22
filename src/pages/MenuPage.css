@@ -281,7 +281,7 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .menu-group-section:first-child .menu-category-grid {
+    .menu-group-section-drink .menu-category-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 

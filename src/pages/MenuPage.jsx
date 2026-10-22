@@ -48,7 +48,7 @@ function MenuPage() {
                 <title>전체 메뉴 | 베리굿초콜릿</title>
                 <meta
                     name="description"
-                    content="베리굿초콜릿의 핫초콜릿, 커피, 디톡스 티, 디저트, 케이크 예약 메뉴를 한눈에 확인하세요."
+                    content="베리굿초콜릿의 리얼 가나슈 초코 모찌 5종, 핫초콜릿, 커피, 디톡스 티, 디저트, 케이크 예약 메뉴를 한눈에 확인하세요."
                 />
             </Helmet>
 
@@ -59,7 +59,7 @@ function MenuPage() {
 
             <div className="menu-section-groups">
                 {menuSections.map((section) => (
-                    <section className="menu-group-section" key={section.id} aria-labelledby={`menu-${section.id}`}>
+                    <section className={`menu-group-section menu-group-section-${section.id}`} key={section.id} aria-labelledby={`menu-${section.id}`}>
                         <h2 id={`menu-${section.id}`}>{section.label}</h2>
                         <div
                             className={`menu-category-grid ${section.groups.length === 1 ? 'is-single' : ''}`}

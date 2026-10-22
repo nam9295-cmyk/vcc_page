@@ -30,6 +30,7 @@ function Header() {
             <nav className={`mobile-nav ${isMobileNavOpen ? 'open' : ''}`}>
                 <button className="close-menu" onClick={closeMobileNav} aria-label="메뉴 닫기">×</button>
                 <ul>
+                    <li><Link to="/menu/mochi" onClick={closeMobileNav}>MOCHI</Link></li>
                     <li><Link to="/menu" onClick={closeMobileNav}>MENU</Link></li>
                     <li><Link to="/about" onClick={closeMobileNav}>ABOUT</Link></li>
                     <li><Link to="/business-story" onClick={closeMobileNav}>STORY</Link></li>

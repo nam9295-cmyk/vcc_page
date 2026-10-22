@@ -132,6 +132,13 @@
   visibility: visible;
 }
 
+@media (max-width: 379px) {
+  .header-logo {
+    left: 20px;
+    transform: none;
+  }
+}
+
 @media (min-width: 768px) {
   .site-header {
     height: 82px;
