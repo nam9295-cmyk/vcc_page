@@ -23,7 +23,7 @@
     ]
   },
   "index.html": {
-    "file": "assets/index-A3G_ZTJO.js",
+    "file": "assets/index-Ch-JlU8i.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -51,7 +51,7 @@
     ]
   },
   "src/pages/AboutPage.jsx": {
-    "file": "assets/AboutPage-DAzZGgpH.js",
+    "file": "assets/AboutPage-CwuKi5Ly.js",
     "name": "AboutPage",
     "src": "src/pages/AboutPage.jsx",
     "isDynamicEntry": true,
@@ -66,7 +66,7 @@
     ]
   },
   "src/pages/AdminPage.jsx": {
-    "file": "assets/AdminPage-9TsCtZvN.js",
+    "file": "assets/AdminPage-CeYSUJL6.js",
     "name": "AdminPage",
     "src": "src/pages/AdminPage.jsx",
     "isDynamicEntry": true,
@@ -81,7 +81,7 @@
     ]
   },
   "src/pages/BlogDetailPage.jsx": {
-    "file": "assets/BlogDetailPage-CYM-aoyV.js",
+    "file": "assets/BlogDetailPage-BWwsTYLo.js",
     "name": "BlogDetailPage",
     "src": "src/pages/BlogDetailPage.jsx",
     "isDynamicEntry": true,
@@ -96,7 +96,7 @@
     ]
   },
   "src/pages/BlogPage.jsx": {
-    "file": "assets/BlogPage-DuMEqJ56.js",
+    "file": "assets/BlogPage-BL1kCjKE.js",
     "name": "BlogPage",
     "src": "src/pages/BlogPage.jsx",
     "isDynamicEntry": true,
@@ -111,7 +111,7 @@
     ]
   },
   "src/pages/BusinessStoryPage.jsx": {
-    "file": "assets/BusinessStoryPage-Dyfg-8Y2.js",
+    "file": "assets/BusinessStoryPage-B163Bicl.js",
     "name": "BusinessStoryPage",
     "src": "src/pages/BusinessStoryPage.jsx",
     "isDynamicEntry": true,
@@ -126,7 +126,7 @@
     ]
   },
   "src/pages/GranolaMenuPage.jsx": {
-    "file": "assets/GranolaMenuPage-od06ns_x.js",
+    "file": "assets/GranolaMenuPage-0pu5TtbS.js",
     "name": "GranolaMenuPage",
     "src": "src/pages/GranolaMenuPage.jsx",
     "isDynamicEntry": true,
@@ -141,7 +141,7 @@
     ]
   },
   "src/pages/MenuDetailPage.jsx": {
-    "file": "assets/MenuDetailPage-xjXI8Ukx.js",
+    "file": "assets/MenuDetailPage-eWc8OS1g.js",
     "name": "MenuDetailPage",
     "src": "src/pages/MenuDetailPage.jsx",
     "isDynamicEntry": true,
@@ -158,7 +158,7 @@
     ]
   },
   "src/pages/MenuPage.jsx": {
-    "file": "assets/MenuPage-d84A_LqB.js",
+    "file": "assets/MenuPage-p5h7YLWM.js",
     "name": "MenuPage",
     "src": "src/pages/MenuPage.jsx",
     "isDynamicEntry": true,
@@ -173,7 +173,7 @@
     ]
   },
   "src/pages/MochiMenuPage.jsx": {
-    "file": "assets/MochiMenuPage-CTxALQ-V.js",
+    "file": "assets/MochiMenuPage-jdhPOmSL.js",
     "name": "MochiMenuPage",
     "src": "src/pages/MochiMenuPage.jsx",
     "isDynamicEntry": true,
@@ -188,7 +188,7 @@
     ]
   },
   "src/pages/NotFoundPage.jsx": {
-    "file": "assets/NotFoundPage-BMXCb34k.js",
+    "file": "assets/NotFoundPage-DLOrF2iQ.js",
     "name": "NotFoundPage",
     "src": "src/pages/NotFoundPage.jsx",
     "isDynamicEntry": true,
@@ -203,7 +203,7 @@
     ]
   },
   "src/pages/PrivacyPage.jsx": {
-    "file": "assets/PrivacyPage-CZnKLcK3.js",
+    "file": "assets/PrivacyPage-CByC91Ug.js",
     "name": "PrivacyPage",
     "src": "src/pages/PrivacyPage.jsx",
     "isDynamicEntry": true,
@@ -218,7 +218,7 @@
     ]
   },
   "src/pages/TermsPage.jsx": {
-    "file": "assets/TermsPage-CU7AgWfB.js",
+    "file": "assets/TermsPage-Ci1WndcT.js",
     "name": "TermsPage",
     "src": "src/pages/TermsPage.jsx",
     "isDynamicEntry": true,

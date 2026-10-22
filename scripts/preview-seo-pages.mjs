@@ -19,7 +19,7 @@ export async function createSeoPreviewServer({ distDir = resolve('dist') } = {})
             response.end(body);
         };
         try {
-            if (manifest.routes[path]) return await send(join(distDir, manifest.routes[path].slice(1)), path === '/404' ? 404 : 200);
+            if (manifest.routes[path]) return await send(join(distDir, manifest.routes[path].slice(1)));
             if (/^\/blog\/[^/]+$/.test(path)) return await send(join(distDir, manifest.blogFallback.slice(1)));
             const candidate = resolve(distDir, `.${path}`);
             if (candidate.startsWith(`${resolve(distDir)}/`)) {

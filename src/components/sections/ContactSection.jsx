@@ -45,7 +45,7 @@ function ContactSection() {
         <section id="contact" className="contact-section">
             <h2 className="section-title">CONTACT US</h2>
             <div className="contact-container">
-                <form onSubmit={handleSubmit}>
+                <form action="https://formspree.io/f/mwvveyoj" method="post" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <input
                             type="text"

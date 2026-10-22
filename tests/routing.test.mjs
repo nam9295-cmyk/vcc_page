@@ -46,6 +46,9 @@ test('unknown static routes return 404; published or future blog IDs retain clie
             assert.equal(response.status, 404, path);
             assert.match(await response.text(), /noindex, follow/);
         }
+        const explicit404 = await fetch(`${origin}/404`);
+        assert.equal(explicit404.status, 200, 'the explicit 404 file follows Cloudflare static-file behavior');
+        assert.match(await explicit404.text(), /noindex, follow/);
         const blog = await fetch(`${origin}/blog/future-post`);
         assert.equal(blog.status, 200);
         assert.doesNotMatch(await blog.text(), /rel="canonical"/);

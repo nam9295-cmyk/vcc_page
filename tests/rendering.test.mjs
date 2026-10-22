@@ -13,6 +13,7 @@ test('initial homepage contains the approved three photos and usable content wit
   assert.doesNotMatch(html, /평일 오전 8시|주말 및 공휴일은 휴무/);
   assert.match(html, /f381edfee0513a095b3aba6fbe1af95cc27b3b6e/);
   assert.match(html, /GutXtq4RPC6uLHTJ4HZJ_YFwDlGY5pgNmPWpdM4ZNxI/);
+  assert.match(html, /4DC5F8BAC2D356D723A3E555EE4F0B00/);
 });
 
 test('mochi route contains all five descriptions, anchors, FAQ and a single consistent head', async () => {
@@ -43,4 +44,12 @@ test('robots and text summaries allow search but do not leak outdated business i
     assert.match(text, /10:00–22:00/);
     assert.doesNotMatch(text, /08:00|원데이 클래스|평일 영업/);
   }
+});
+
+test('prerendered enquiry form posts to the existing service instead of leaking fields into the URL', async () => {
+  const html = await read('index.html');
+  const form = html.match(/<form\b[^>]*>/)?.[0];
+  assert.ok(form, 'contact form must exist in the initial HTML');
+  assert.match(form, /method="post"/i);
+  assert.match(form, /action="https:\/\/formspree\.io\/f\/mwvveyoj"/);
 });
