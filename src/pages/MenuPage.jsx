@@ -42,7 +42,7 @@ function MenuPage() {
     };
 
     return (
-        <main className="menu-page">
+        <main className="menu-page" data-analytics-location="menu">
 
             <section className="menu-page-hero" aria-labelledby="menu-page-title">
                 <h1 id="menu-page-title" className="billboard-word menu-page-word">MENU</h1>

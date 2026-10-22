@@ -3,7 +3,7 @@ import { store } from '../../data/store';
 
 function LocationSection() {
     return (
-        <section className="location-section">
+        <section className="location-section" data-analytics-location="home_location">
             <h2 className="location-title">LOCATION</h2>
             <div className="location-content">
                 <p className="location-text">

@@ -2,7 +2,7 @@ import './CakeReservationSection.css';
 
 function CakeReservationSection() {
     return (
-        <section className="cake-reservation" aria-labelledby="cake-title">
+        <section className="cake-reservation" aria-labelledby="cake-title" data-analytics-location="home_cake">
             <h2 id="cake-title" className="billboard-word cake-display-word">CAKE</h2>
 
             <div className="cake-content">

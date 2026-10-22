@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { submitContactMessage } from '../../services/contact.js';
 import './ContactSection.css';
 
 function ContactSection() {
@@ -20,15 +21,9 @@ function ContactSection() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('https://formspree.io/f/mwvveyoj', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formState)
-            });
+            const accepted = await submitContactMessage(formState);
 
-            if (response.ok) {
+            if (accepted) {
                 setSubmitMessage('문의가 성공적으로 전송되었습니다!');
                 setFormState({ name: '', email: '', message: '' });
             } else {

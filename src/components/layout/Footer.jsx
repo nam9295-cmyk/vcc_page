@@ -8,7 +8,7 @@ const MAP_URL = 'https://map.naver.com/p/entry/place/1069379954';
 function Footer() {
     return (
         <div className="footer-reveal-shell">
-            <footer className="site-footer">
+            <footer className="site-footer" data-analytics-location="footer">
                 <div className="footer-inner">
                     <div className="footer-primary">
                         <section className="footer-cake-callout" aria-labelledby="footer-cake-title">

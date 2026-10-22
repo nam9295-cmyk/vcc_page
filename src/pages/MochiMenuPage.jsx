@@ -38,7 +38,7 @@ function MochiMenuPage() {
                 </div>
             </section>
 
-            <section className="mochi-visit" aria-labelledby="mochi-visit-title">
+            <section className="mochi-visit" aria-labelledby="mochi-visit-title" data-analytics-location="mochi_visit">
                 <h2 id="mochi-visit-title">대구 베리굿초콜릿에서 만나요</h2>
                 <p>{store.address}</p>
                 <p>{store.hours} · <a href="tel:07078400717">{store.phone}</a></p>
